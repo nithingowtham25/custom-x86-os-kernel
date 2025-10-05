@@ -1,0 +1,2159 @@
+Linux
+qemu-system-x86_64 -kernel kernel.bin -serial stdio
+Installing handler in IDT position 0
+Installing handler in IDT position 1
+Installing handler in IDT position 2
+Installing handler in IDT position 3
+Installing handler in IDT position 4
+Installing handler in IDT position 5
+Installing handler in IDT position 6
+Installing handler in IDT position 7
+Installing handler in IDT position 8
+Installing handler in IDT position 9
+Installing handler in IDT position 10
+Installing handler in IDT position 11
+Installing handler in IDT position 12
+Installing handler in IDT position 13
+Installing handler in IDT position 14
+Installing handler in IDT position 15
+Installing handler in IDT position 16
+Installing handler in IDT position 17
+Installing handler in IDT position 18
+Installing handler in IDT position 19
+Installing handler in IDT position 20
+Installing handler in IDT position 21
+Installing handler in IDT position 22
+Installing handler in IDT position 23
+Installing handler in IDT position 24
+Installing handler in IDT position 25
+Installing handler in IDT position 26
+Installing handler in IDT position 27
+Installing handler in IDT position 28
+Installing handler in IDT position 29
+Installing handler in IDT position 30
+Installing handler in IDT position 31
+Installing handler in IDT position 32
+Installing handler in IDT position 33
+Installing handler in IDT position 34
+Installing handler in IDT position 35
+Installing handler in IDT position 36
+Installing handler in IDT position 37
+Installing handler in IDT position 38
+Installing handler in IDT position 39
+Installing handler in IDT position 40
+Installing handler in IDT position 41
+Installing handler in IDT position 42
+Installing handler in IDT position 43
+Installing handler in IDT position 44
+Installing handler in IDT position 45
+Installing handler in IDT position 46
+Installing handler in IDT position 47
+Installed exception handler at ISR <0>
+Installed interrupt handler at IRQ <0>
+
+Setting up kernel memory pool
+Contiguous Frame Pool initialized
+
+Setting up process memory pool
+ContFramePool::needed_info_frames: frames needed = 1
+
+Frame to store process pool info
+Executing get_frames
+Success: found contiguous block from local frames 1 to 1
+Contiguous Frame Pool initialized
+
+Inaccessible memory 15MB-16MB
+Marking inaccessible memory range: 3840 - 4095 (frame numbers)
+Installed exception handler at ISR <14>
+Initialized Paging System
+Kernel pool and process pool registered
+Shared region size is set to 4 MB
+
+Page Table Constructor
+Executing get_frames
+Success: found contiguous block from local frames 2 to 2
+Page Directory frame is allocated in kernel pool
+Shared region requires <1024> pages across <1> page directory entries
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Built Page Table <0> for shared region
+Constructed Page Table object
+
+Loading Page Table
+Page Directory loaded into CR3
+This Page Table is now active
+Loaded page table
+
+Enabling Paging in CR0
+PG bit set, paging is now enabled!
+
+WE TURNED ON PAGING!
+
+If we see this message, the page tables have been
+set up mostly correctly.
+Hello World!
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Missing Page Table. Allocating new one...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+New Page Table allocated and linked
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 0 to 0
+Mapped Faulted Page #: <1024> from physical memory (process pool) to entry #: <0> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 1 to 1
+Mapped Faulted Page #: <1025> from physical memory (process pool) to entry #: <1> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 2 to 2
+Mapped Faulted Page #: <1026> from physical memory (process pool) to entry #: <2> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped Faulted Page #: <1027> from physical memory (process pool) to entry #: <3> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped Faulted Page #: <1028> from physical memory (process pool) to entry #: <4> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped Faulted Page #: <1029> from physical memory (process pool) to entry #: <5> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped Faulted Page #: <1030> from physical memory (process pool) to entry #: <6> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped Faulted Page #: <1031> from physical memory (process pool) to entry #: <7> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 8 to 8
+Mapped Faulted Page #: <1032> from physical memory (process pool) to entry #: <8> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 9 to 9
+Mapped Faulted Page #: <1033> from physical memory (process pool) to entry #: <9> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 10 to 10
+Mapped Faulted Page #: <1034> from physical memory (process pool) to entry #: <10> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 11 to 11
+Mapped Faulted Page #: <1035> from physical memory (process pool) to entry #: <11> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 12 to 12
+Mapped Faulted Page #: <1036> from physical memory (process pool) to entry #: <12> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 13 to 13
+Mapped Faulted Page #: <1037> from physical memory (process pool) to entry #: <13> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 14 to 14
+Mapped Faulted Page #: <1038> from physical memory (process pool) to entry #: <14> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 15 to 15
+Mapped Faulted Page #: <1039> from physical memory (process pool) to entry #: <15> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 16 to 16
+Mapped Faulted Page #: <1040> from physical memory (process pool) to entry #: <16> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 17 to 17
+Mapped Faulted Page #: <1041> from physical memory (process pool) to entry #: <17> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 18 to 18
+Mapped Faulted Page #: <1042> from physical memory (process pool) to entry #: <18> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 19 to 19
+Mapped Faulted Page #: <1043> from physical memory (process pool) to entry #: <19> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 20 to 20
+Mapped Faulted Page #: <1044> from physical memory (process pool) to entry #: <20> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 21 to 21
+Mapped Faulted Page #: <1045> from physical memory (process pool) to entry #: <21> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 22 to 22
+Mapped Faulted Page #: <1046> from physical memory (process pool) to entry #: <22> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 23 to 23
+Mapped Faulted Page #: <1047> from physical memory (process pool) to entry #: <23> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 24 to 24
+Mapped Faulted Page #: <1048> from physical memory (process pool) to entry #: <24> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 25 to 25
+Mapped Faulted Page #: <1049> from physical memory (process pool) to entry #: <25> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 26 to 26
+Mapped Faulted Page #: <1050> from physical memory (process pool) to entry #: <26> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 27 to 27
+Mapped Faulted Page #: <1051> from physical memory (process pool) to entry #: <27> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 28 to 28
+Mapped Faulted Page #: <1052> from physical memory (process pool) to entry #: <28> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 29 to 29
+Mapped Faulted Page #: <1053> from physical memory (process pool) to entry #: <29> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 30 to 30
+Mapped Faulted Page #: <1054> from physical memory (process pool) to entry #: <30> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 31 to 31
+Mapped Faulted Page #: <1055> from physical memory (process pool) to entry #: <31> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 32 to 32
+Mapped Faulted Page #: <1056> from physical memory (process pool) to entry #: <32> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 33 to 33
+Mapped Faulted Page #: <1057> from physical memory (process pool) to entry #: <33> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 34 to 34
+Mapped Faulted Page #: <1058> from physical memory (process pool) to entry #: <34> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 35 to 35
+Mapped Faulted Page #: <1059> from physical memory (process pool) to entry #: <35> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 36 to 36
+Mapped Faulted Page #: <1060> from physical memory (process pool) to entry #: <36> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 37 to 37
+Mapped Faulted Page #: <1061> from physical memory (process pool) to entry #: <37> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 38 to 38
+Mapped Faulted Page #: <1062> from physical memory (process pool) to entry #: <38> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 39 to 39
+Mapped Faulted Page #: <1063> from physical memory (process pool) to entry #: <39> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 40 to 40
+Mapped Faulted Page #: <1064> from physical memory (process pool) to entry #: <40> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 41 to 41
+Mapped Faulted Page #: <1065> from physical memory (process pool) to entry #: <41> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 42 to 42
+Mapped Faulted Page #: <1066> from physical memory (process pool) to entry #: <42> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 43 to 43
+Mapped Faulted Page #: <1067> from physical memory (process pool) to entry #: <43> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 44 to 44
+Mapped Faulted Page #: <1068> from physical memory (process pool) to entry #: <44> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 45 to 45
+Mapped Faulted Page #: <1069> from physical memory (process pool) to entry #: <45> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 46 to 46
+Mapped Faulted Page #: <1070> from physical memory (process pool) to entry #: <46> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 47 to 47
+Mapped Faulted Page #: <1071> from physical memory (process pool) to entry #: <47> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 48 to 48
+Mapped Faulted Page #: <1072> from physical memory (process pool) to entry #: <48> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 49 to 49
+Mapped Faulted Page #: <1073> from physical memory (process pool) to entry #: <49> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 50 to 50
+Mapped Faulted Page #: <1074> from physical memory (process pool) to entry #: <50> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 51 to 51
+Mapped Faulted Page #: <1075> from physical memory (process pool) to entry #: <51> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 52 to 52
+Mapped Faulted Page #: <1076> from physical memory (process pool) to entry #: <52> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 53 to 53
+Mapped Faulted Page #: <1077> from physical memory (process pool) to entry #: <53> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 54 to 54
+Mapped Faulted Page #: <1078> from physical memory (process pool) to entry #: <54> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 55 to 55
+Mapped Faulted Page #: <1079> from physical memory (process pool) to entry #: <55> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 56 to 56
+Mapped Faulted Page #: <1080> from physical memory (process pool) to entry #: <56> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 57 to 57
+Mapped Faulted Page #: <1081> from physical memory (process pool) to entry #: <57> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 58 to 58
+Mapped Faulted Page #: <1082> from physical memory (process pool) to entry #: <58> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 59 to 59
+Mapped Faulted Page #: <1083> from physical memory (process pool) to entry #: <59> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 60 to 60
+Mapped Faulted Page #: <1084> from physical memory (process pool) to entry #: <60> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 61 to 61
+Mapped Faulted Page #: <1085> from physical memory (process pool) to entry #: <61> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 62 to 62
+Mapped Faulted Page #: <1086> from physical memory (process pool) to entry #: <62> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 63 to 63
+Mapped Faulted Page #: <1087> from physical memory (process pool) to entry #: <63> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 64 to 64
+Mapped Faulted Page #: <1088> from physical memory (process pool) to entry #: <64> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 65 to 65
+Mapped Faulted Page #: <1089> from physical memory (process pool) to entry #: <65> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 66 to 66
+Mapped Faulted Page #: <1090> from physical memory (process pool) to entry #: <66> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 67 to 67
+Mapped Faulted Page #: <1091> from physical memory (process pool) to entry #: <67> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 68 to 68
+Mapped Faulted Page #: <1092> from physical memory (process pool) to entry #: <68> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 69 to 69
+Mapped Faulted Page #: <1093> from physical memory (process pool) to entry #: <69> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 70 to 70
+Mapped Faulted Page #: <1094> from physical memory (process pool) to entry #: <70> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 71 to 71
+Mapped Faulted Page #: <1095> from physical memory (process pool) to entry #: <71> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 72 to 72
+Mapped Faulted Page #: <1096> from physical memory (process pool) to entry #: <72> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 73 to 73
+Mapped Faulted Page #: <1097> from physical memory (process pool) to entry #: <73> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 74 to 74
+Mapped Faulted Page #: <1098> from physical memory (process pool) to entry #: <74> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 75 to 75
+Mapped Faulted Page #: <1099> from physical memory (process pool) to entry #: <75> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 76 to 76
+Mapped Faulted Page #: <1100> from physical memory (process pool) to entry #: <76> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 77 to 77
+Mapped Faulted Page #: <1101> from physical memory (process pool) to entry #: <77> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 78 to 78
+Mapped Faulted Page #: <1102> from physical memory (process pool) to entry #: <78> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 79 to 79
+Mapped Faulted Page #: <1103> from physical memory (process pool) to entry #: <79> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 80 to 80
+Mapped Faulted Page #: <1104> from physical memory (process pool) to entry #: <80> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 81 to 81
+Mapped Faulted Page #: <1105> from physical memory (process pool) to entry #: <81> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 82 to 82
+Mapped Faulted Page #: <1106> from physical memory (process pool) to entry #: <82> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 83 to 83
+Mapped Faulted Page #: <1107> from physical memory (process pool) to entry #: <83> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 84 to 84
+Mapped Faulted Page #: <1108> from physical memory (process pool) to entry #: <84> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 85 to 85
+Mapped Faulted Page #: <1109> from physical memory (process pool) to entry #: <85> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 86 to 86
+Mapped Faulted Page #: <1110> from physical memory (process pool) to entry #: <86> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 87 to 87
+Mapped Faulted Page #: <1111> from physical memory (process pool) to entry #: <87> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 88 to 88
+Mapped Faulted Page #: <1112> from physical memory (process pool) to entry #: <88> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 89 to 89
+Mapped Faulted Page #: <1113> from physical memory (process pool) to entry #: <89> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 90 to 90
+Mapped Faulted Page #: <1114> from physical memory (process pool) to entry #: <90> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 91 to 91
+Mapped Faulted Page #: <1115> from physical memory (process pool) to entry #: <91> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 92 to 92
+Mapped Faulted Page #: <1116> from physical memory (process pool) to entry #: <92> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 93 to 93
+Mapped Faulted Page #: <1117> from physical memory (process pool) to entry #: <93> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 94 to 94
+Mapped Faulted Page #: <1118> from physical memory (process pool) to entry #: <94> of page table #: <1>
+Page Fault successfully handled
+
+One second has passed
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 95 to 95
+Mapped Faulted Page #: <1119> from physical memory (process pool) to entry #: <95> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 96 to 96
+Mapped Faulted Page #: <1120> from physical memory (process pool) to entry #: <96> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 97 to 97
+Mapped Faulted Page #: <1121> from physical memory (process pool) to entry #: <97> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 98 to 98
+Mapped Faulted Page #: <1122> from physical memory (process pool) to entry #: <98> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 99 to 99
+Mapped Faulted Page #: <1123> from physical memory (process pool) to entry #: <99> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 100 to 100
+Mapped Faulted Page #: <1124> from physical memory (process pool) to entry #: <100> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 101 to 101
+Mapped Faulted Page #: <1125> from physical memory (process pool) to entry #: <101> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 102 to 102
+Mapped Faulted Page #: <1126> from physical memory (process pool) to entry #: <102> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 103 to 103
+Mapped Faulted Page #: <1127> from physical memory (process pool) to entry #: <103> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 104 to 104
+Mapped Faulted Page #: <1128> from physical memory (process pool) to entry #: <104> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 105 to 105
+Mapped Faulted Page #: <1129> from physical memory (process pool) to entry #: <105> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 106 to 106
+Mapped Faulted Page #: <1130> from physical memory (process pool) to entry #: <106> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 107 to 107
+Mapped Faulted Page #: <1131> from physical memory (process pool) to entry #: <107> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 108 to 108
+Mapped Faulted Page #: <1132> from physical memory (process pool) to entry #: <108> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 109 to 109
+Mapped Faulted Page #: <1133> from physical memory (process pool) to entry #: <109> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 110 to 110
+Mapped Faulted Page #: <1134> from physical memory (process pool) to entry #: <110> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 111 to 111
+Mapped Faulted Page #: <1135> from physical memory (process pool) to entry #: <111> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 112 to 112
+Mapped Faulted Page #: <1136> from physical memory (process pool) to entry #: <112> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 113 to 113
+Mapped Faulted Page #: <1137> from physical memory (process pool) to entry #: <113> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 114 to 114
+Mapped Faulted Page #: <1138> from physical memory (process pool) to entry #: <114> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 115 to 115
+Mapped Faulted Page #: <1139> from physical memory (process pool) to entry #: <115> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 116 to 116
+Mapped Faulted Page #: <1140> from physical memory (process pool) to entry #: <116> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 117 to 117
+Mapped Faulted Page #: <1141> from physical memory (process pool) to entry #: <117> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 118 to 118
+Mapped Faulted Page #: <1142> from physical memory (process pool) to entry #: <118> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 119 to 119
+Mapped Faulted Page #: <1143> from physical memory (process pool) to entry #: <119> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 120 to 120
+Mapped Faulted Page #: <1144> from physical memory (process pool) to entry #: <120> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 121 to 121
+Mapped Faulted Page #: <1145> from physical memory (process pool) to entry #: <121> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 122 to 122
+Mapped Faulted Page #: <1146> from physical memory (process pool) to entry #: <122> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 123 to 123
+Mapped Faulted Page #: <1147> from physical memory (process pool) to entry #: <123> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 124 to 124
+Mapped Faulted Page #: <1148> from physical memory (process pool) to entry #: <124> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 125 to 125
+Mapped Faulted Page #: <1149> from physical memory (process pool) to entry #: <125> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 126 to 126
+Mapped Faulted Page #: <1150> from physical memory (process pool) to entry #: <126> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 127 to 127
+Mapped Faulted Page #: <1151> from physical memory (process pool) to entry #: <127> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 128 to 128
+Mapped Faulted Page #: <1152> from physical memory (process pool) to entry #: <128> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 129 to 129
+Mapped Faulted Page #: <1153> from physical memory (process pool) to entry #: <129> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 130 to 130
+Mapped Faulted Page #: <1154> from physical memory (process pool) to entry #: <130> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 131 to 131
+Mapped Faulted Page #: <1155> from physical memory (process pool) to entry #: <131> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 132 to 132
+Mapped Faulted Page #: <1156> from physical memory (process pool) to entry #: <132> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 133 to 133
+Mapped Faulted Page #: <1157> from physical memory (process pool) to entry #: <133> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 134 to 134
+Mapped Faulted Page #: <1158> from physical memory (process pool) to entry #: <134> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 135 to 135
+Mapped Faulted Page #: <1159> from physical memory (process pool) to entry #: <135> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 136 to 136
+Mapped Faulted Page #: <1160> from physical memory (process pool) to entry #: <136> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 137 to 137
+Mapped Faulted Page #: <1161> from physical memory (process pool) to entry #: <137> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 138 to 138
+Mapped Faulted Page #: <1162> from physical memory (process pool) to entry #: <138> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 139 to 139
+Mapped Faulted Page #: <1163> from physical memory (process pool) to entry #: <139> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 140 to 140
+Mapped Faulted Page #: <1164> from physical memory (process pool) to entry #: <140> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 141 to 141
+Mapped Faulted Page #: <1165> from physical memory (process pool) to entry #: <141> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 142 to 142
+Mapped Faulted Page #: <1166> from physical memory (process pool) to entry #: <142> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 143 to 143
+Mapped Faulted Page #: <1167> from physical memory (process pool) to entry #: <143> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 144 to 144
+Mapped Faulted Page #: <1168> from physical memory (process pool) to entry #: <144> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 145 to 145
+Mapped Faulted Page #: <1169> from physical memory (process pool) to entry #: <145> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 146 to 146
+Mapped Faulted Page #: <1170> from physical memory (process pool) to entry #: <146> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 147 to 147
+Mapped Faulted Page #: <1171> from physical memory (process pool) to entry #: <147> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 148 to 148
+Mapped Faulted Page #: <1172> from physical memory (process pool) to entry #: <148> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 149 to 149
+Mapped Faulted Page #: <1173> from physical memory (process pool) to entry #: <149> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 150 to 150
+Mapped Faulted Page #: <1174> from physical memory (process pool) to entry #: <150> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 151 to 151
+Mapped Faulted Page #: <1175> from physical memory (process pool) to entry #: <151> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 152 to 152
+Mapped Faulted Page #: <1176> from physical memory (process pool) to entry #: <152> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 153 to 153
+Mapped Faulted Page #: <1177> from physical memory (process pool) to entry #: <153> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 154 to 154
+Mapped Faulted Page #: <1178> from physical memory (process pool) to entry #: <154> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 155 to 155
+Mapped Faulted Page #: <1179> from physical memory (process pool) to entry #: <155> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 156 to 156
+Mapped Faulted Page #: <1180> from physical memory (process pool) to entry #: <156> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 157 to 157
+Mapped Faulted Page #: <1181> from physical memory (process pool) to entry #: <157> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 158 to 158
+Mapped Faulted Page #: <1182> from physical memory (process pool) to entry #: <158> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 159 to 159
+Mapped Faulted Page #: <1183> from physical memory (process pool) to entry #: <159> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 160 to 160
+Mapped Faulted Page #: <1184> from physical memory (process pool) to entry #: <160> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 161 to 161
+Mapped Faulted Page #: <1185> from physical memory (process pool) to entry #: <161> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 162 to 162
+Mapped Faulted Page #: <1186> from physical memory (process pool) to entry #: <162> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 163 to 163
+Mapped Faulted Page #: <1187> from physical memory (process pool) to entry #: <163> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 164 to 164
+Mapped Faulted Page #: <1188> from physical memory (process pool) to entry #: <164> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 165 to 165
+Mapped Faulted Page #: <1189> from physical memory (process pool) to entry #: <165> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 166 to 166
+Mapped Faulted Page #: <1190> from physical memory (process pool) to entry #: <166> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 167 to 167
+Mapped Faulted Page #: <1191> from physical memory (process pool) to entry #: <167> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 168 to 168
+Mapped Faulted Page #: <1192> from physical memory (process pool) to entry #: <168> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 169 to 169
+Mapped Faulted Page #: <1193> from physical memory (process pool) to entry #: <169> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 170 to 170
+Mapped Faulted Page #: <1194> from physical memory (process pool) to entry #: <170> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 171 to 171
+Mapped Faulted Page #: <1195> from physical memory (process pool) to entry #: <171> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 172 to 172
+Mapped Faulted Page #: <1196> from physical memory (process pool) to entry #: <172> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 173 to 173
+Mapped Faulted Page #: <1197> from physical memory (process pool) to entry #: <173> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 174 to 174
+Mapped Faulted Page #: <1198> from physical memory (process pool) to entry #: <174> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 175 to 175
+Mapped Faulted Page #: <1199> from physical memory (process pool) to entry #: <175> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 176 to 176
+Mapped Faulted Page #: <1200> from physical memory (process pool) to entry #: <176> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 177 to 177
+Mapped Faulted Page #: <1201> from physical memory (process pool) to entry #: <177> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 178 to 178
+Mapped Faulted Page #: <1202> from physical memory (process pool) to entry #: <178> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 179 to 179
+Mapped Faulted Page #: <1203> from physical memory (process pool) to entry #: <179> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 180 to 180
+Mapped Faulted Page #: <1204> from physical memory (process pool) to entry #: <180> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 181 to 181
+Mapped Faulted Page #: <1205> from physical memory (process pool) to entry #: <181> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 182 to 182
+Mapped Faulted Page #: <1206> from physical memory (process pool) to entry #: <182> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 183 to 183
+Mapped Faulted Page #: <1207> from physical memory (process pool) to entry #: <183> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 184 to 184
+Mapped Faulted Page #: <1208> from physical memory (process pool) to entry #: <184> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 185 to 185
+Mapped Faulted Page #: <1209> from physical memory (process pool) to entry #: <185> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 186 to 186
+Mapped Faulted Page #: <1210> from physical memory (process pool) to entry #: <186> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 187 to 187
+Mapped Faulted Page #: <1211> from physical memory (process pool) to entry #: <187> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 188 to 188
+Mapped Faulted Page #: <1212> from physical memory (process pool) to entry #: <188> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 189 to 189
+Mapped Faulted Page #: <1213> from physical memory (process pool) to entry #: <189> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 190 to 190
+Mapped Faulted Page #: <1214> from physical memory (process pool) to entry #: <190> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 191 to 191
+Mapped Faulted Page #: <1215> from physical memory (process pool) to entry #: <191> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 192 to 192
+Mapped Faulted Page #: <1216> from physical memory (process pool) to entry #: <192> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 193 to 193
+Mapped Faulted Page #: <1217> from physical memory (process pool) to entry #: <193> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 194 to 194
+Mapped Faulted Page #: <1218> from physical memory (process pool) to entry #: <194> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 195 to 195
+Mapped Faulted Page #: <1219> from physical memory (process pool) to entry #: <195> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 196 to 196
+Mapped Faulted Page #: <1220> from physical memory (process pool) to entry #: <196> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 197 to 197
+Mapped Faulted Page #: <1221> from physical memory (process pool) to entry #: <197> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 198 to 198
+Mapped Faulted Page #: <1222> from physical memory (process pool) to entry #: <198> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 199 to 199
+Mapped Faulted Page #: <1223> from physical memory (process pool) to entry #: <199> of page table #: <1>
+Page Fault successfully handled
+
+One second has passed
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 200 to 200
+Mapped Faulted Page #: <1224> from physical memory (process pool) to entry #: <200> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 201 to 201
+Mapped Faulted Page #: <1225> from physical memory (process pool) to entry #: <201> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 202 to 202
+Mapped Faulted Page #: <1226> from physical memory (process pool) to entry #: <202> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 203 to 203
+Mapped Faulted Page #: <1227> from physical memory (process pool) to entry #: <203> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 204 to 204
+Mapped Faulted Page #: <1228> from physical memory (process pool) to entry #: <204> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 205 to 205
+Mapped Faulted Page #: <1229> from physical memory (process pool) to entry #: <205> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 206 to 206
+Mapped Faulted Page #: <1230> from physical memory (process pool) to entry #: <206> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 207 to 207
+Mapped Faulted Page #: <1231> from physical memory (process pool) to entry #: <207> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 208 to 208
+Mapped Faulted Page #: <1232> from physical memory (process pool) to entry #: <208> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 209 to 209
+Mapped Faulted Page #: <1233> from physical memory (process pool) to entry #: <209> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 210 to 210
+Mapped Faulted Page #: <1234> from physical memory (process pool) to entry #: <210> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 211 to 211
+Mapped Faulted Page #: <1235> from physical memory (process pool) to entry #: <211> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 212 to 212
+Mapped Faulted Page #: <1236> from physical memory (process pool) to entry #: <212> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 213 to 213
+Mapped Faulted Page #: <1237> from physical memory (process pool) to entry #: <213> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 214 to 214
+Mapped Faulted Page #: <1238> from physical memory (process pool) to entry #: <214> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 215 to 215
+Mapped Faulted Page #: <1239> from physical memory (process pool) to entry #: <215> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 216 to 216
+Mapped Faulted Page #: <1240> from physical memory (process pool) to entry #: <216> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 217 to 217
+Mapped Faulted Page #: <1241> from physical memory (process pool) to entry #: <217> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 218 to 218
+Mapped Faulted Page #: <1242> from physical memory (process pool) to entry #: <218> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 219 to 219
+Mapped Faulted Page #: <1243> from physical memory (process pool) to entry #: <219> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 220 to 220
+Mapped Faulted Page #: <1244> from physical memory (process pool) to entry #: <220> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 221 to 221
+Mapped Faulted Page #: <1245> from physical memory (process pool) to entry #: <221> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 222 to 222
+Mapped Faulted Page #: <1246> from physical memory (process pool) to entry #: <222> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 223 to 223
+Mapped Faulted Page #: <1247> from physical memory (process pool) to entry #: <223> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 224 to 224
+Mapped Faulted Page #: <1248> from physical memory (process pool) to entry #: <224> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 225 to 225
+Mapped Faulted Page #: <1249> from physical memory (process pool) to entry #: <225> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 226 to 226
+Mapped Faulted Page #: <1250> from physical memory (process pool) to entry #: <226> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 227 to 227
+Mapped Faulted Page #: <1251> from physical memory (process pool) to entry #: <227> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 228 to 228
+Mapped Faulted Page #: <1252> from physical memory (process pool) to entry #: <228> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 229 to 229
+Mapped Faulted Page #: <1253> from physical memory (process pool) to entry #: <229> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 230 to 230
+Mapped Faulted Page #: <1254> from physical memory (process pool) to entry #: <230> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 231 to 231
+Mapped Faulted Page #: <1255> from physical memory (process pool) to entry #: <231> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 232 to 232
+Mapped Faulted Page #: <1256> from physical memory (process pool) to entry #: <232> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 233 to 233
+Mapped Faulted Page #: <1257> from physical memory (process pool) to entry #: <233> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 234 to 234
+Mapped Faulted Page #: <1258> from physical memory (process pool) to entry #: <234> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 235 to 235
+Mapped Faulted Page #: <1259> from physical memory (process pool) to entry #: <235> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 236 to 236
+Mapped Faulted Page #: <1260> from physical memory (process pool) to entry #: <236> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 237 to 237
+Mapped Faulted Page #: <1261> from physical memory (process pool) to entry #: <237> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 238 to 238
+Mapped Faulted Page #: <1262> from physical memory (process pool) to entry #: <238> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 239 to 239
+Mapped Faulted Page #: <1263> from physical memory (process pool) to entry #: <239> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 240 to 240
+Mapped Faulted Page #: <1264> from physical memory (process pool) to entry #: <240> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 241 to 241
+Mapped Faulted Page #: <1265> from physical memory (process pool) to entry #: <241> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 242 to 242
+Mapped Faulted Page #: <1266> from physical memory (process pool) to entry #: <242> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 243 to 243
+Mapped Faulted Page #: <1267> from physical memory (process pool) to entry #: <243> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 244 to 244
+Mapped Faulted Page #: <1268> from physical memory (process pool) to entry #: <244> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 245 to 245
+Mapped Faulted Page #: <1269> from physical memory (process pool) to entry #: <245> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 246 to 246
+Mapped Faulted Page #: <1270> from physical memory (process pool) to entry #: <246> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 247 to 247
+Mapped Faulted Page #: <1271> from physical memory (process pool) to entry #: <247> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 248 to 248
+Mapped Faulted Page #: <1272> from physical memory (process pool) to entry #: <248> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 249 to 249
+Mapped Faulted Page #: <1273> from physical memory (process pool) to entry #: <249> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 250 to 250
+Mapped Faulted Page #: <1274> from physical memory (process pool) to entry #: <250> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 251 to 251
+Mapped Faulted Page #: <1275> from physical memory (process pool) to entry #: <251> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 252 to 252
+Mapped Faulted Page #: <1276> from physical memory (process pool) to entry #: <252> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 253 to 253
+Mapped Faulted Page #: <1277> from physical memory (process pool) to entry #: <253> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 254 to 254
+Mapped Faulted Page #: <1278> from physical memory (process pool) to entry #: <254> of page table #: <1>
+Page Fault successfully handled
+
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 255 to 255
+Mapped Faulted Page #: <1279> from physical memory (process pool) to entry #: <255> of page table #: <1>
+Page Fault successfully handled
+
+DONE WRITING TO MEMORY. Now testing...
+TEST PASSED
+YOU CAN SAFELY TURN OFF THE MACHINE NOW.
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+qemu: terminating on signal 2

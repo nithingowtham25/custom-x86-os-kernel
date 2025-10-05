@@ -105,13 +105,15 @@ int main() {
     Machine::enable_interrupts();
 
     /* -- INITIALIZE FRAME POOLS -- */
-
+    Console::puts("\nSetting up kernel memory pool\n");
     ContFramePool kernel_mem_pool(KERNEL_POOL_START_FRAME,
                                   KERNEL_POOL_SIZE,
                                   0);
 
+    Console::puts("\nSetting up process memory pool\n");
     unsigned long n_info_frames = ContFramePool::needed_info_frames(PROCESS_POOL_SIZE);
     
+    Console::puts("\nFrame to store process pool info\n");
     unsigned long process_mem_pool_info_frame = kernel_mem_pool.get_frames(n_info_frames);
     
     ContFramePool process_mem_pool(PROCESS_POOL_START_FRAME,
@@ -119,6 +121,7 @@ int main() {
                                    process_mem_pool_info_frame);
     
     /* Take care of the hole in the memory. */
+    Console::puts("\nInaccessible memory 15MB-16MB\n");
     process_mem_pool.mark_inaccessible(MEM_HOLE_START_FRAME, MEM_HOLE_SIZE);
     
     /* -- INITIALIZE MEMORY (PAGING) -- */
@@ -145,18 +148,18 @@ int main() {
                            4 MB);
     
     PageTable pt;
-    
+
     pt.load();
 
     PageTable::enable_paging();
 
-    Console::puts("WE TURNED ON PAGING!\n");
+    Console::puts("WE TURNED ON PAGING!\n\n");
     Console::puts("If we see this message, the page tables have been\n");
     Console::puts("set up mostly correctly.\n");
 
     /* -- MOST OF WHAT WE NEED IS SETUP. THE KERNEL CAN START. */
     
-    Console::puts("Hello World!\n");
+    Console::puts("Hello World!\n\n");
     
     /* -- GENERATE MEMORY REFERENCES */
     

@@ -202,9 +202,9 @@ unsigned long ContFramePool::get_frames(unsigned int _n_frames)
     // Any frames left to allocate?
     assert(_n_frames > 0 && _n_frames <= nFreeFrames);
     
-    Console::puts("ContFramePool::get_frames: requested ");
-    Console::puti(_n_frames);
-    Console::puts(" frames\n");
+    // Console::puts("ContFramePool::get_frames: requested ");
+    // Console::puti(_n_frames);
+    // Console::puts(" frames\n");
 
     // Scan for a contiguous run of _n_frames free frames
     unsigned long run = 0;
@@ -233,9 +233,9 @@ unsigned long ContFramePool::get_frames(unsigned int _n_frames)
                 }
                 nFreeFrames -= _n_frames;
                 unsigned long abs_frame = start + base_frame_no;
-                Console::puts("Returning absolute frame no ");
-                Console::puti(abs_frame);
-                Console::puts("\n");
+                // Console::puts("Returning absolute frame no ");
+                // Console::puti(abs_frame);
+                // Console::puts("\n");
 
                 return abs_frame;
             }

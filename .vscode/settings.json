@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "cont_frame_pool.C": "cpp",
+        "kernel.C": "cpp",
+        "assert.C": "cpp",
+        "page_table.C": "cpp",
+        "interrupts.C": "cpp"
+    }
+}

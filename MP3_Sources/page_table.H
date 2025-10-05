@@ -1,10 +1,10 @@
 /*
     File: page_table.H
 
-    Author: R. Bettati
+    Author: Nithin Gowtham Saravanan
             Department of Computer Science
             Texas A&M University
-    Date  : 16/12/07
+    Date  : 01/10/2025
 
     Description: Basic Paging.
 
