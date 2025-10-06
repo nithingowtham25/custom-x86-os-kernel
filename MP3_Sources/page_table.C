@@ -22,29 +22,6 @@ static inline void invlpg(void *addr)
     asm volatile("invlpg (%0)" ::"r"(addr) : "memory");
 }
 
-// /* Setting a memory region to 0 manually*/
-// static void zero_mem(unsigned long *ptr, unsigned long size_bytes) 
-// {
-//    unsigned char *p = (unsigned char *)ptr;
-//    for (unsigned long i = 0; i < size_bytes; ++i) 
-//    {
-//       p[i] = 0;
-//    }
-// }
-
-static void print_hex(unsigned long val) 
-{
-   const char *hex = "0123456789ABCDEF";
-   char buf[17];
-   buf[16] = '\0'; // null-terminate
-   for (int i = 15; i >= 0; --i) 
-   {
-      buf[i] = hex[val & 0xF];
-      val >>= 4;
-   }
-   Console::puts(buf); // print via existing Console::puts
-}
-
 /* Initialize Paging */
 void PageTable::init_paging(ContFramePool * _kernel_mem_pool,
                             ContFramePool * _process_mem_pool,

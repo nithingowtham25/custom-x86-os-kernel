@@ -857,7 +857,6 @@ Success: found contiguous block from local frames 94 to 94
 Mapped Faulted Page #: <1118> from physical memory (process pool) to entry #: <94> of page table #: <1>
 Page Fault successfully handled
 
-One second has passed
 EXCEPTION DISPATCHER: exc_no = <14>
 Page Fault triggered
 Page not present. Allocating data frame...
@@ -946,6 +945,7 @@ Success: found contiguous block from local frames 105 to 105
 Mapped Faulted Page #: <1129> from physical memory (process pool) to entry #: <105> of page table #: <1>
 Page Fault successfully handled
 
+One second has passed
 EXCEPTION DISPATCHER: exc_no = <14>
 Page Fault triggered
 Page not present. Allocating data frame...
@@ -1698,7 +1698,6 @@ Success: found contiguous block from local frames 199 to 199
 Mapped Faulted Page #: <1223> from physical memory (process pool) to entry #: <199> of page table #: <1>
 Page Fault successfully handled
 
-One second has passed
 EXCEPTION DISPATCHER: exc_no = <14>
 Page Fault triggered
 Page not present. Allocating data frame...
@@ -1987,6 +1986,7 @@ Success: found contiguous block from local frames 235 to 235
 Mapped Faulted Page #: <1259> from physical memory (process pool) to entry #: <235> of page table #: <1>
 Page Fault successfully handled
 
+One second has passed
 EXCEPTION DISPATCHER: exc_no = <14>
 Page Fault triggered
 Page not present. Allocating data frame...
@@ -2150,8 +2150,6 @@ Page Fault successfully handled
 DONE WRITING TO MEMORY. Now testing...
 TEST PASSED
 YOU CAN SAFELY TURN OFF THE MACHINE NOW.
-One second has passed
-One second has passed
 One second has passed
 One second has passed
 One second has passed
