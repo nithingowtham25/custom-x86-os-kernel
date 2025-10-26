@@ -2,9 +2,9 @@
     File: vm_pool.H
 
     Author: Nithin Gowtham Saravanan
-            Department of Computer Science
+            Department of Electrical and Computer Engineering
             Texas A&M University
-    Date  : 10/26/2025
+    Date  : 10/24/2025
 
     Description: Management of the Virtual Memory Pool
 
@@ -41,8 +41,29 @@ class PageTable;
 /*--------------------------------------------------------------------------*/
 
 class VMPool { /* Virtual Memory Pool */
+public:
+   /* Next pointer used by PageTable to maintain registered-pools list (MP4) */
+   VMPool * next = nullptr;
+
 private:
    /* -- DEFINE YOUR VIRTUAL MEMORY POOL DATA STRUCTURE(s) HERE. */
+   unsigned long base_address;   // virtual start (bytes)
+   unsigned long size_bytes;     // pool size in bytes
+   ContFramePool * frame_pool;   // backing physical frame pool (used by PageTable on faults)
+   PageTable * page_table;       // page table for this address space
+
+   /* Region bookkeeping arrays (simple implementation) */
+   static const unsigned int MAX_REGIONS = 256; // limited but sufficient
+   struct Region {
+       unsigned long base_page;   // page number (virtual) relative to entire address space
+       unsigned long length;      // in pages
+   };
+
+   Region allocated_regions[MAX_REGIONS];
+   unsigned int n_allocated;
+
+   Region free_regions[MAX_REGIONS];
+   unsigned int n_free;
 
 public:
    VMPool(unsigned long  _base_address,

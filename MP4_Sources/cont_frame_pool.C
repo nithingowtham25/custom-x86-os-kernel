@@ -180,12 +180,18 @@ ContFramePool::ContFramePool(unsigned long _base_frame_no,
         set_state(fno, FrameState::Free);
     }
 
-    // Mark the first frame as HoS for initialization info if it is being used
-    if(_info_frame_no == 0) 
+    // Mark metadata/info frame(s) as used
+    if (_info_frame_no == 0) 
     {
         set_state(0, FrameState::HoS);
         nFreeFrames--;
-    }
+    } 
+    else if (_info_frame_no >= base_frame_no && _info_frame_no < base_frame_no + nframes) 
+    {
+        unsigned long local = _info_frame_no - base_frame_no;
+        set_state(local, FrameState::HoS);
+        nFreeFrames--;
+   }
 
     // Insert this pool into the global pool list
     this->next = pool_list;
@@ -200,7 +206,10 @@ unsigned long ContFramePool::get_frames(unsigned int _n_frames)
     Console::puts("Executing get_frames\n");
 
     // Any frames left to allocate?
-    assert(_n_frames > 0 && _n_frames <= nFreeFrames);
+    if (_n_frames == 0) 
+        return 0;
+    if (_n_frames > nFreeFrames)
+        return 0;
     
     // Console::puts("ContFramePool::get_frames: requested ");
     // Console::puti(_n_frames);
@@ -246,7 +255,6 @@ unsigned long ContFramePool::get_frames(unsigned int _n_frames)
 
     // If we reach here, no contiguous block found
     Console::puts("No contiguous block available!\n");
-    assert(false);
     return 0;
 }
 
@@ -264,11 +272,14 @@ void ContFramePool::mark_inaccessible(unsigned long _base_frame_no,
     {
         if (fno >= base_frame_no && fno < base_frame_no + nframes) {
             unsigned long local = fno - base_frame_no;
+
+            FrameState prev = get_state(local);
             if (fno == _base_frame_no)
                 set_state(local, FrameState::HoS);
             else
                 set_state(local, FrameState::Used);
-            nFreeFrames--;
+            if (prev == FrameState::Free)
+                nFreeFrames--;
         }
     }
 }

@@ -3,7 +3,7 @@
  
  Author: R. Bettati
  Modified by: Nithin Gowtham Saravanan
- Department of Computer Science
+ Department of Electrical and Computer Engineering
  Texas A&M University
  Date  : 09/17/2025
  
