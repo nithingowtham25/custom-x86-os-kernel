@@ -4,6 +4,7 @@
         "kernel.C": "cpp",
         "assert.C": "cpp",
         "page_table.C": "cpp",
-        "interrupts.C": "cpp"
+        "interrupts.C": "cpp",
+        "vm_pool.C": "cpp"
     }
 }

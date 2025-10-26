@@ -2,10 +2,9 @@
  File: cont_frame_pool.H
  
  Author: R. Bettati
- Modified by: Nithin Gowtham Saravanan
  Department of Computer Science
  Texas A&M University
- Date  : 09/17/2025
+ Date  : 17/02/04 
  
  Description: Management of the CONTIGUOUS Free-Frame Pool.
  
@@ -43,12 +42,8 @@ class ContFramePool {
     
 private:
     /* -- DEFINE YOUR CONT FRAME POOL DATA STRUCTURE(s) HERE. */
-
-    unsigned char * bitmap;        // Implementation of contiguous frame pool with bitmap (1 = free, 0 = used)
-    unsigned int    nFreeFrames;   // No. of free frames 
-    unsigned long   base_frame_no; // Start of frame pool start in phys mem
-    unsigned long   nframes;       // Size of the frame pool
-    unsigned long   info_frame_no; // Frame number where bitmap/info is stored
+    
+    
     
     /* ---- STATE MANAGEMENT */
     
@@ -56,11 +51,8 @@ private:
 
     FrameState get_state(unsigned long _frame_no);
     void set_state(unsigned long _frame_no, FrameState _state);
-
-    /* Each pool will link into a global list of pools */
-    static ContFramePool *pool_list; // Head of static linked list of all pools
-    ContFramePool *next;             // Next pool in the list
-
+    
+    
 public:
 
     // The frame size is the same as the page size, duh...    

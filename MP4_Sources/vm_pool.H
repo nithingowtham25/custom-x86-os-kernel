@@ -1,11 +1,10 @@
 /*
     File: vm_pool.H
 
-    Author: R. Bettati
+    Author: Nithin Gowtham Saravanan
             Department of Computer Science
             Texas A&M University
-    Date  : 10/26/2010
-    Update: 21/10/13
+    Date  : 10/26/2025
 
     Description: Management of the Virtual Memory Pool
 
