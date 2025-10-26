@@ -1,15 +1,14 @@
 /*
- File: page_table.H
- 
- Author: R. Bettati
- Department of Computer Science
- Texas A&M University
- Date  : 17/12/07
- Update: 21/10/13
- 
- Description: Basic Paging.
- 
- */
+    File: page_table.H
+
+    Author: Nithin Gowtham Saravanan
+            Department of Electrical and Computer Engineering
+            Texas A&M University
+    Date  : 10/23/2025
+
+    Description: Basic Paging.
+
+*/
 
 #ifndef _page_table_H_                   // include file only once
 #define _page_table_H_
