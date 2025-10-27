@@ -1,0 +1,3675 @@
+Linux
+qemu-system-x86_64 -kernel kernel.bin -serial stdio
+Installed exception handler at ISR <0>
+Installed interrupt handler at IRQ <0>
+Contiguous Frame Pool initialized
+ContFramePool::needed_info_frames: frames needed = 1
+Executing get_frames
+Success: found contiguous block from local frames 1 to 1
+Contiguous Frame Pool initialized
+Marking inaccessible memory range: 3840 - 4095 (frame numbers)
+POOLS INITIALIZED!
+Installed exception handler at ISR <14>
+Initialized Paging System
+Kernel pool and process pool registered
+Shared region size is set to 4 MB
+
+Page Table Constructor
+Executing get_frames
+Success: found contiguous block from local frames 0 to 0
+Page Directory frame is allocated in process pool
+Shared region requires <1024> pages across <1> page directory entries
+Executing get_frames
+Success: found contiguous block from local frames 1 to 1
+Built Page Table <0> for shared region
+Constructed Page Table object
+
+Loading Page Table
+Page Directory loaded into CR3
+This Page Table is now active
+Loaded page table
+
+Enabling Paging in CR0
+PG bit set, paging is now enabled!
+
+Hello World!
+PageTable::register_pool called
+VMPool registered with PageTable
+Constructed VMPool object.
+Base virt addr: <536870912>, size bytes: <268435456>, pages: <65536>
+PageTable::register_pool called
+VMPool registered with PageTable
+Constructed VMPool object.
+Base virt addr: <1073741824>, size bytes: <268435456>, pages: <65536>
+VM Pools successfully created!
+I am starting with an extensive test
+of the VM Pool memory allocator.
+Please be patient...
+Testing the memory allocation on code_pool...
+VMPool::allocate called (size bytes = <400>)
+VMPool::allocate returning virtual addr <536870912>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Missing Page Table. Allocating new one...
+Executing get_frames
+Success: found contiguous block from local frames 2 to 2
+New Page Table allocated and linked
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536870912>
+PageTable::free_page called for page <131072>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <800>)
+VMPool::allocate returning virtual addr <536875008>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536875008>
+PageTable::free_page called for page <131073>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <1200>)
+VMPool::allocate returning virtual addr <536879104>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536879104>
+PageTable::free_page called for page <131074>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <1600>)
+VMPool::allocate returning virtual addr <536883200>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536883200>
+PageTable::free_page called for page <131075>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <2000>)
+VMPool::allocate returning virtual addr <536887296>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536887296>
+PageTable::free_page called for page <131076>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <2400>)
+VMPool::allocate returning virtual addr <536891392>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536891392>
+PageTable::free_page called for page <131077>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <2800>)
+VMPool::allocate returning virtual addr <536895488>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536895488>
+PageTable::free_page called for page <131078>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <3200>)
+VMPool::allocate returning virtual addr <536899584>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536899584>
+PageTable::free_page called for page <131079>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <3600>)
+VMPool::allocate returning virtual addr <536903680>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536903680>
+PageTable::free_page called for page <131080>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <4000>)
+VMPool::allocate returning virtual addr <536907776>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536907776>
+PageTable::free_page called for page <131081>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <4400>)
+VMPool::allocate returning virtual addr <536911872>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536911872>
+PageTable::free_page called for page <131082>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131083>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <4800>)
+VMPool::allocate returning virtual addr <536920064>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536920064>
+PageTable::free_page called for page <131084>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131085>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <5200>)
+VMPool::allocate returning virtual addr <536928256>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536928256>
+PageTable::free_page called for page <131086>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131087>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <5600>)
+VMPool::allocate returning virtual addr <536936448>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536936448>
+PageTable::free_page called for page <131088>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131089>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <6000>)
+VMPool::allocate returning virtual addr <536944640>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536944640>
+PageTable::free_page called for page <131090>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131091>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <6400>)
+VMPool::allocate returning virtual addr <536952832>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+One second has passed
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536952832>
+PageTable::free_page called for page <131092>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131093>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <6800>)
+VMPool::allocate returning virtual addr <536961024>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536961024>
+PageTable::free_page called for page <131094>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131095>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <7200>)
+VMPool::allocate returning virtual addr <536969216>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536969216>
+PageTable::free_page called for page <131096>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131097>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <7600>)
+VMPool::allocate returning virtual addr <536977408>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536977408>
+PageTable::free_page called for page <131098>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131099>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <8000>)
+VMPool::allocate returning virtual addr <536985600>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536985600>
+PageTable::free_page called for page <131100>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131101>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <8400>)
+VMPool::allocate returning virtual addr <536993792>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <536993792>
+PageTable::free_page called for page <131102>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131103>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131104>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <8800>)
+VMPool::allocate returning virtual addr <537006080>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537006080>
+PageTable::free_page called for page <131105>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131106>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131107>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <9200>)
+VMPool::allocate returning virtual addr <537018368>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537018368>
+PageTable::free_page called for page <131108>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131109>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131110>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <9600>)
+VMPool::allocate returning virtual addr <537030656>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537030656>
+PageTable::free_page called for page <131111>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131112>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131113>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <10000>)
+VMPool::allocate returning virtual addr <537042944>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537042944>
+PageTable::free_page called for page <131114>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131115>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131116>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <10400>)
+VMPool::allocate returning virtual addr <537055232>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537055232>
+PageTable::free_page called for page <131117>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131118>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131119>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <10800>)
+VMPool::allocate returning virtual addr <537067520>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537067520>
+PageTable::free_page called for page <131120>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+One second has passed
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131121>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131122>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <11200>)
+VMPool::allocate returning virtual addr <537079808>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537079808>
+PageTable::free_page called for page <131123>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131124>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131125>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <11600>)
+VMPool::allocate returning virtual addr <537092096>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537092096>
+PageTable::free_page called for page <131126>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131127>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131128>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <12000>)
+VMPool::allocate returning virtual addr <537104384>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537104384>
+PageTable::free_page called for page <131129>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131130>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131131>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <12400>)
+VMPool::allocate returning virtual addr <537116672>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537116672>
+PageTable::free_page called for page <131132>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131133>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131134>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131135>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <12800>)
+VMPool::allocate returning virtual addr <537133056>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537133056>
+PageTable::free_page called for page <131136>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131137>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131138>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131139>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <13200>)
+VMPool::allocate returning virtual addr <537149440>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537149440>
+PageTable::free_page called for page <131140>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131141>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131142>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131143>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <13600>)
+VMPool::allocate returning virtual addr <537165824>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537165824>
+PageTable::free_page called for page <131144>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131145>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131146>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131147>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <14000>)
+VMPool::allocate returning virtual addr <537182208>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537182208>
+PageTable::free_page called for page <131148>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131149>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131150>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131151>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+One second has passed
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <14400>)
+VMPool::allocate returning virtual addr <537198592>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537198592>
+PageTable::free_page called for page <131152>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131153>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131154>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131155>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <14800>)
+VMPool::allocate returning virtual addr <537214976>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537214976>
+PageTable::free_page called for page <131156>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131157>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131158>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131159>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <15200>)
+VMPool::allocate returning virtual addr <537231360>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537231360>
+PageTable::free_page called for page <131160>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131161>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131162>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131163>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <15600>)
+VMPool::allocate returning virtual addr <537247744>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537247744>
+PageTable::free_page called for page <131164>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131165>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131166>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131167>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <16000>)
+VMPool::allocate returning virtual addr <537264128>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537264128>
+PageTable::free_page called for page <131168>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131169>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131170>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131171>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <16400>)
+VMPool::allocate returning virtual addr <537280512>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537280512>
+PageTable::free_page called for page <131172>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131173>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131174>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131175>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131176>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <16800>)
+VMPool::allocate returning virtual addr <537300992>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537300992>
+PageTable::free_page called for page <131177>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131178>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131179>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+One second has passed
+PageTable::free_page called for page <131180>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131181>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <17200>)
+VMPool::allocate returning virtual addr <537321472>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537321472>
+PageTable::free_page called for page <131182>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131183>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131184>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131185>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131186>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <17600>)
+VMPool::allocate returning virtual addr <537341952>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537341952>
+PageTable::free_page called for page <131187>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131188>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131189>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131190>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131191>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <18000>)
+VMPool::allocate returning virtual addr <537362432>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537362432>
+PageTable::free_page called for page <131192>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131193>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131194>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131195>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131196>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <18400>)
+VMPool::allocate returning virtual addr <537382912>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537382912>
+PageTable::free_page called for page <131197>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131198>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131199>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131200>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131201>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <18800>)
+VMPool::allocate returning virtual addr <537403392>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537403392>
+PageTable::free_page called for page <131202>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131203>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131204>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131205>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131206>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <19200>)
+VMPool::allocate returning virtual addr <537423872>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+One second has passed
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537423872>
+PageTable::free_page called for page <131207>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131208>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131209>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131210>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131211>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <19600>)
+VMPool::allocate returning virtual addr <537444352>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <537444352>
+PageTable::free_page called for page <131212>
+Releasing physical frame <1027>
+ContFramePool::release_frames called for frame 1027
+Freeing HoS at local frame 3
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131213>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131214>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131215>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <131216>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+Testing the memory allocation on heap_pool...
+VMPool::allocate called (size bytes = <400>)
+VMPool::allocate returning virtual addr <1073741824>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Missing Page Table. Allocating new one...
+Executing get_frames
+Success: found contiguous block from local frames 3 to 3
+New Page Table allocated and linked
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073741824>
+PageTable::free_page called for page <262144>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <800>)
+VMPool::allocate returning virtual addr <1073745920>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073745920>
+PageTable::free_page called for page <262145>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <1200>)
+VMPool::allocate returning virtual addr <1073750016>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073750016>
+PageTable::free_page called for page <262146>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <1600>)
+VMPool::allocate returning virtual addr <1073754112>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073754112>
+PageTable::free_page called for page <262147>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <2000>)
+VMPool::allocate returning virtual addr <1073758208>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073758208>
+PageTable::free_page called for page <262148>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <2400>)
+VMPool::allocate returning virtual addr <1073762304>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073762304>
+PageTable::free_page called for page <262149>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <2800>)
+VMPool::allocate returning virtual addr <1073766400>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073766400>
+PageTable::free_page called for page <262150>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <3200>)
+VMPool::allocate returning virtual addr <1073770496>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073770496>
+PageTable::free_page called for page <262151>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <3600>)
+VMPool::allocate returning virtual addr <1073774592>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073774592>
+PageTable::free_page called for page <262152>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <4000>)
+VMPool::allocate returning virtual addr <1073778688>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073778688>
+PageTable::free_page called for page <262153>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <4400>)
+VMPool::allocate returning virtual addr <1073782784>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073782784>
+PageTable::free_page called for page <262154>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262155>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <4800>)
+VMPool::allocate returning virtual addr <1073790976>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073790976>
+PageTable::free_page called for page <262156>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262157>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <5200>)
+VMPool::allocate returning virtual addr <1073799168>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073799168>
+PageTable::free_page called for page <262158>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262159>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <5600>)
+VMPool::allocate returning virtual addr <1073807360>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+One second has passed
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073807360>
+PageTable::free_page called for page <262160>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262161>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <6000>)
+VMPool::allocate returning virtual addr <1073815552>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073815552>
+PageTable::free_page called for page <262162>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262163>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <6400>)
+VMPool::allocate returning virtual addr <1073823744>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073823744>
+PageTable::free_page called for page <262164>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262165>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <6800>)
+VMPool::allocate returning virtual addr <1073831936>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073831936>
+PageTable::free_page called for page <262166>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262167>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <7200>)
+VMPool::allocate returning virtual addr <1073840128>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073840128>
+PageTable::free_page called for page <262168>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262169>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <7600>)
+VMPool::allocate returning virtual addr <1073848320>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073848320>
+PageTable::free_page called for page <262170>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262171>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <8000>)
+VMPool::allocate returning virtual addr <1073856512>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073856512>
+PageTable::free_page called for page <262172>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262173>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <8400>)
+VMPool::allocate returning virtual addr <1073864704>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073864704>
+PageTable::free_page called for page <262174>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262175>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262176>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <8800>)
+VMPool::allocate returning virtual addr <1073876992>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073876992>
+PageTable::free_page called for page <262177>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262178>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262179>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <9200>)
+VMPool::allocate returning virtual addr <1073889280>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073889280>
+PageTable::free_page called for page <262180>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262181>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262182>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <9600>)
+VMPool::allocate returning virtual addr <1073901568>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073901568>
+PageTable::free_page called for page <262183>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262184>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262185>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <10000>)
+VMPool::allocate returning virtual addr <1073913856>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+One second has passed
+VMPool::release called for address <1073913856>
+PageTable::free_page called for page <262186>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262187>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262188>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <10400>)
+VMPool::allocate returning virtual addr <1073926144>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073926144>
+PageTable::free_page called for page <262189>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262190>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262191>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <10800>)
+VMPool::allocate returning virtual addr <1073938432>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073938432>
+PageTable::free_page called for page <262192>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262193>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262194>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <11200>)
+VMPool::allocate returning virtual addr <1073950720>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073950720>
+PageTable::free_page called for page <262195>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262196>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262197>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <11600>)
+VMPool::allocate returning virtual addr <1073963008>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073963008>
+PageTable::free_page called for page <262198>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262199>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262200>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <12000>)
+VMPool::allocate returning virtual addr <1073975296>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073975296>
+PageTable::free_page called for page <262201>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262202>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262203>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <12400>)
+VMPool::allocate returning virtual addr <1073987584>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1073987584>
+PageTable::free_page called for page <262204>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262205>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262206>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262207>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <12800>)
+VMPool::allocate returning virtual addr <1074003968>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074003968>
+PageTable::free_page called for page <262208>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262209>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262210>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262211>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <13200>)
+VMPool::allocate returning virtual addr <1074020352>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074020352>
+PageTable::free_page called for page <262212>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262213>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262214>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262215>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <13600>)
+VMPool::allocate returning virtual addr <1074036736>
+One second has passed
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074036736>
+PageTable::free_page called for page <262216>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262217>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262218>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262219>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <14000>)
+VMPool::allocate returning virtual addr <1074053120>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074053120>
+PageTable::free_page called for page <262220>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262221>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262222>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262223>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <14400>)
+VMPool::allocate returning virtual addr <1074069504>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074069504>
+PageTable::free_page called for page <262224>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262225>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262226>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262227>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <14800>)
+VMPool::allocate returning virtual addr <1074085888>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074085888>
+PageTable::free_page called for page <262228>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262229>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262230>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262231>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <15200>)
+VMPool::allocate returning virtual addr <1074102272>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074102272>
+PageTable::free_page called for page <262232>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262233>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262234>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262235>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <15600>)
+VMPool::allocate returning virtual addr <1074118656>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074118656>
+PageTable::free_page called for page <262236>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262237>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262238>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262239>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <16000>)
+VMPool::allocate returning virtual addr <1074135040>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074135040>
+PageTable::free_page called for page <262240>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262241>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262242>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262243>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <16400>)
+VMPool::allocate returning virtual addr <1074151424>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 8 to 8
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074151424>
+PageTable::free_page called for page <262244>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+PageOne second has passed
+ freed and TLB entry invalidated
+PageTable::free_page called for page <262245>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262246>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262247>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262248>
+Releasing physical frame <1032>
+ContFramePool::release_frames called for frame 1032
+Freeing HoS at local frame 8
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <16800>)
+VMPool::allocate returning virtual addr <1074171904>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 8 to 8
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074171904>
+PageTable::free_page called for page <262249>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262250>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262251>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262252>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262253>
+Releasing physical frame <1032>
+ContFramePool::release_frames called for frame 1032
+Freeing HoS at local frame 8
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <17200>)
+VMPool::allocate returning virtual addr <1074192384>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 8 to 8
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074192384>
+PageTable::free_page called for page <262254>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262255>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262256>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262257>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262258>
+Releasing physical frame <1032>
+ContFramePool::release_frames called for frame 1032
+Freeing HoS at local frame 8
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <17600>)
+VMPool::allocate returning virtual addr <1074212864>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 8 to 8
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074212864>
+PageTable::free_page called for page <262259>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262260>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262261>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262262>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262263>
+Releasing physical frame <1032>
+ContFramePool::release_frames called for frame 1032
+Freeing HoS at local frame 8
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <18000>)
+VMPool::allocate returning virtual addr <1074233344>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 8 to 8
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074233344>
+PageTable::free_page called for page <262264>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262265>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262266>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262267>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262268>
+Releasing physical frame <1032>
+ContFramePool::release_frames called for frame 1032
+Freeing HoS at local frame 8
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <18400>)
+VMPool::allocate returning virtual addr <1074253824>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 8 to 8
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074253824>
+PageTable::free_page called for page <262269>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262270>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262271>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262272>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262273>
+Releasing physical frame <1032>
+ContFramePool::release_frames called for frame 1032
+Freeing HoS at local frame 8
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <18800>)
+VMPool::allocate returning virtual addr <1074274304>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 8 to 8
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074274304>
+PageTable::free_page called for page <262274>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262275>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262276>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262277>
+One second has passed
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262278>
+Releasing physical frame <1032>
+ContFramePool::release_frames called for frame 1032
+Freeing HoS at local frame 8
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <19200>)
+VMPool::allocate returning virtual addr <1074294784>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 8 to 8
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074294784>
+PageTable::free_page called for page <262279>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262280>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262281>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262282>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262283>
+Releasing physical frame <1032>
+ContFramePool::release_frames called for frame 1032
+Freeing HoS at local frame 8
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+VMPool::allocate called (size bytes = <19600>)
+VMPool::allocate returning virtual addr <1074315264>
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 4 to 4
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 5 to 5
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 6 to 6
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 7 to 7
+Mapped faulted VA using a frame from its VMPool
+EXCEPTION DISPATCHER: exc_no = <14>
+Page Fault triggered
+Page not present. Allocating data frame...
+Executing get_frames
+Success: found contiguous block from local frames 8 to 8
+Mapped faulted VA using a frame from its VMPool
+VMPool::release called for address <1074315264>
+PageTable::free_page called for page <262284>
+Releasing physical frame <1028>
+ContFramePool::release_frames called for frame 1028
+Freeing HoS at local frame 4
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262285>
+Releasing physical frame <1029>
+ContFramePool::release_frames called for frame 1029
+Freeing HoS at local frame 5
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262286>
+Releasing physical frame <1030>
+ContFramePool::release_frames called for frame 1030
+Freeing HoS at local frame 6
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262287>
+Releasing physical frame <1031>
+ContFramePool::release_frames called for frame 1031
+Freeing HoS at local frame 7
+Page freed and TLB entry invalidated
+PageTable::free_page called for page <262288>
+Releasing physical frame <1032>
+ContFramePool::release_frames called for frame 1032
+Freeing HoS at local frame 8
+Page freed and TLB entry invalidated
+VMPool::release completed - Released region of memory.
+Test Passed! Congratulations!
+YOU CAN SAFELY TURN OFF THE MACHINE NOW.
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+qemu: terminating on signal 2
