@@ -1,7 +1,9 @@
 /* 
-    Author: R. Bettati, Joshua Capehart
-            Department of Computer Science
+    File: scheduler.H
+    Author: Nithin Gowtham Saravanan
+            Department of Electrical and Computer Engineering
             Texas A&M University
+    Date  : 11/01/2025
 			
 	    A thread scheduler.
 
@@ -88,9 +90,9 @@ public:
    /* Remove the given thread from the scheduler in preparation for destruction
       of the thread. 
       Graciously handle the case where the thread wants to terminate itself.*/
-  
+   
+   void terminate_self(); 
+   /* helper used by thread_shutdown() for current thread */
 };
-	
-	
 
 #endif

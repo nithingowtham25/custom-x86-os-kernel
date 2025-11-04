@@ -57,6 +57,7 @@
 #include "mem_pool.H"
 
 #include "thread.H"          /* THREAD MANAGEMENT */
+#include "macros_config.H"
 
 #ifdef _USES_SCHEDULER_
 #include "scheduler.H"

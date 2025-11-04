@@ -1,10 +1,10 @@
 /*
     File: thread.H
 
-    Author: R. Bettati
-            Department of Computer Science
+    Author: Nithin Gowtham Saravanan
+            Department of Electrical and Computer Engineering
             Texas A&M University
-    Date  : 11/10/25
+    Date  : 11/01/2025
 
     Description: Thread Management. 
     
@@ -85,6 +85,23 @@ public:
     static Thread * CurrentThread();
     /* Returns the currently running thread. nullptr if no thread has started 
        yet. */
+
+    /* Accessors used by Scheduler for safe cleanup (zombie reaper) */
+    /* These provide minimal, controlled access to stack base/size so the scheduler
+       can free resources when reaping zombies. */
+    char * get_stack_base() { return stack; }
+    unsigned int get_stack_size() { return stack_size; }
 };
+
+/*--------------------------------------------------------------------------*/
+/* SUPPORT FUNCTIONS */
+/*--------------------------------------------------------------------------*/
+
+/* Called automatically when a thread function returns.
+   The scheduler uses it to safely terminate and context-switch away. */
+extern "C" void thread_shutdown();
+
+/* Entry stub for new threads */
+extern "C" void thread_start();
 
 #endif
