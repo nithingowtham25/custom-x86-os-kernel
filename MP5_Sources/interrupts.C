@@ -24,6 +24,7 @@
 #include "irq.H"
 #include "exceptions.H"
 #include "interrupts.H"
+#include "macros_config.H"
 
 /*--------------------------------------------------------------------------*/
 /* EXTERNS */
@@ -126,7 +127,19 @@ void InterruptHandler::dispatch_interrupt(REGS * _r) {
     //    abort();
   }
   else {
-    /* -- HANDLE THE INTERRUPT */
+#if defined(_USES_SCHEDULER_) && defined(_RR_SCHEDULER_)
+    /* In RR mode, pre-ACK the timer IRQ (IRQ0) so the ISR can trigger a
+       context switch without leaving the PIC line wedged. */
+    if (int_no == 0) {
+      if (generated_by_slave_PIC(int_no)) {
+        Machine::outportb(0xA0, 0x20);
+      }
+      Machine::outportb(0x20, 0x20);
+      handler->handle_interrupt(_r);
+      return;  /* avoid double EOI below */
+    }
+#endif
+    /* FIFO build or non-timer IRQ in RR: handle first, then EOI. */
     handler->handle_interrupt(_r);
   }
 

@@ -22,6 +22,7 @@
 /*--------------------------------------------------------------------------*/
 
 #include "thread.H"
+#include "macros_config.H"
 
 /*--------------------------------------------------------------------------*/
 /* !!! IMPLEMENTATION HINT !!! */
@@ -93,6 +94,11 @@ public:
    
    void terminate_self(); 
    /* helper used by thread_shutdown() for current thread */
+
+   #ifdef _RR_SCHEDULER_
+      /* Called from the timer IRQ when quantum expires (IRQ context). */
+      void eoq_preempt_isr();
+   #endif
 };
 
 #endif

@@ -358,3 +358,31 @@ void Scheduler::terminate_self()
 
   Thread::dispatch_to(next);
 }
+
+#ifdef _RR_SCHEDULER_
+void Scheduler::eoq_preempt_isr() {
+  /* IRQ context: interrupts are already disabled by CPU.
+     Do not call Machine::{enable,disable}_interrupts() here.
+     Do not print to console. Keep it minimal & reentrant. */
+
+  Thread* me = Thread::CurrentThread();
+  if (!me || me == idle_thread) {
+    return;                         /* nothing to preempt */
+  }
+
+  /* Put current at tail; pick next from head.  RQ helpers are file-local
+     and not touching Thread internals; safe with IRQs disabled. */
+  rq_push_tail(me);
+  Thread* next = rq_pop_head();
+
+  if (!next || next == me) {
+    return;                         /* nobody else runnable */
+  }
+
+  /* Context-switch INSIDE the IRQ handler. We’ve arranged early EOI (see interrupts.C),
+     so it’s safe that we won’t “return” to send EOI after the handler. */
+  Thread::dispatch_to(next);
+  /* never returns here; when the preempted thread is later rescheduled,
+     it will resume after the dispatcher in the ISR frame and return normally. */
+}
+#endif

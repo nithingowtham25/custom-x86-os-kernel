@@ -9,5 +9,6 @@
                  different source code files (including kernel.C)
 */
 
-#define _USES_SCHEDULER_
-#define _TERMINATING_FUNCTIONS_
+#define _USES_SCHEDULER_        // uncomment to enable FIFO scheduling
+#define _TERMINATING_FUNCTIONS_ // uncomment to terminate threads 1 and 2 in kernel.c
+#define _RR_SCHEDULER_          // uncomment to enable Round-Robin

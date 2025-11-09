@@ -252,11 +252,17 @@ int main() {
 
     /* Question: Why do we want a timer? We have it to make sure that 
                  we enable interrupts correctly. If we forget to do it,
-                 the timer "dies". */
+                 the timer "dies". */ 
 
-    SimpleTimer timer(100); /* timer ticks every 10ms. */
-    InterruptHandler::register_handler(0, &timer);
-    /* The Timer is implemented as an interrupt handler. */
+    #ifndef _RR_SCHEDULER_
+        // FIFO build - use the original SimpleTimer (e.g., 10ms for “one second passed” prints)
+        SimpleTimer timer(100);            /* 10ms tick */
+        InterruptHandler::register_handler(0, &timer);
+        /* The Timer is implemented as an interrupt handler. */
+    #else
+        EOQTimer eoq(50);                  /* 50ms RR quantum */
+        InterruptHandler::register_handler(0, &eoq);
+    #endif
 
 #ifdef _USES_SCHEDULER_
 
