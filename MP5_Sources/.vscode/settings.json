@@ -6,6 +6,7 @@
         "machine.C": "cpp",
         "simple_timer.C": "cpp",
         "eoq_timer.C": "cpp",
-        "interrupts.C": "cpp"
+        "interrupts.C": "cpp",
+        "frame_pool.C": "cpp"
     }
 }
