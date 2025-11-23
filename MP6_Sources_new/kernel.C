@@ -166,7 +166,7 @@ void fun2()
 		/* -- Read */
 		Console::puts("Reading Block "); Console::puti(read_block); Console::puts(" from disk...\n");
 		System::DISK->read(read_block, buf);
-		Console::puts("\nContent of block is:");
+		Console::puts("\nFUN 2: Content of block is:");
 		for (int i = 0; i < DISK_BLOCK_SIZE; i++) {
 			Console::putui((unsigned int)buf[i]);
 			buf[i] = j % 256;
@@ -206,18 +206,66 @@ void fun3()
 
 void fun4()
 {
-	Console::puts("THREAD: "); Console::puti(Thread::CurrentThread()->ThreadId()); Console::puts("\n");
+    Console::puts("THREAD: "); Console::puti(Thread::CurrentThread()->ThreadId()); Console::puts("\n");
 
-	for (int j = 0;; j++) {
+#ifndef _THREADSAFE_DISK_
+    /* ------------------------------------------------------------------
+       Baseline behavior (no thread-safe disk enabled):
+       Just a CPU-bound ticker like before.
+       ------------------------------------------------------------------ */
+    for (int j = 0;; j++) {
 
-		Console::puts("FUN 4 IN BURST["); Console::puti(j); Console::puts("]\n");
+        Console::puts("FUN 4 IN BURST["); Console::puti(j); Console::puts("]\n");
 
-		for (int i = 0; i < 10; i++) {
-			Console::puts("FUN 4: TICK ["); Console::puti(i); Console::puts("]\n");
-		}
+        for (int i = 0; i < 10; i++) {
+            Console::puts("FUN 4: TICK ["); Console::puti(i); Console::puts("]\n");
+        }
 
-		pass_on_CPU(thread1);
-	}
+        pass_on_CPU(thread1);
+    }
+
+#else
+    /* ------------------------------------------------------------------
+       Thread-safe disk test behavior (when _THREADSAFE_DISK_ is defined):
+       Make FUN 4 also hammer the disk concurrently with FUN 2.
+       This stresses the per-disk lock and non-blocking wait_while_busy().
+       ------------------------------------------------------------------ */
+
+    unsigned char buf[DISK_BLOCK_SIZE];
+    int read_block  = 5;  // start at a different block than FUN 2 (1)
+    int write_block = 9;  // arbitrary – you can overlap on purpose if you want
+
+    Console::puts("FUN 4 DISK TEST MODE ENABLED\n");
+
+    for (int j = 0;; j++) {
+
+        Console::puts("FUN 4 IN DISK ITERATION["); Console::puti(j); Console::puts("]\n");
+
+        /* -- Read */
+        Console::puts("FUN 4: Reading Block "); Console::puti(read_block); Console::puts(" from disk...\n");
+        System::DISK->read(read_block, buf);
+
+        Console::puts("\nFUN 4: Content of block is:");
+        for (int i = 0; i < DISK_BLOCK_SIZE; i++) {
+            Console::putui((unsigned int)buf[i]);
+            /* Write a different pattern than FUN 2 so we can see who wrote what. */
+            buf[i] = (j + 100) % 256;   // distinguish from FUN 2’s j % 256
+        }
+        Console::puts("\n");
+
+        /* -- Write updated contents back */
+        Console::puts("FUN 4: Writing buffer to Block "); Console::puti(write_block); Console::puts(" on disk...\n");
+        System::DISK->write(write_block, buf);
+        Console::puts("\nFUN 4: Done writing\n");
+
+        /* -- Advance blocks (wrap within 0..9 like FUN 2) */
+        write_block = read_block;
+        read_block  = (read_block + 1) % 10;
+
+        /* -- Give up the CPU */
+        pass_on_CPU(thread1);
+    }
+#endif
 }
 
 /*--------------------------------------------------------------------------*/

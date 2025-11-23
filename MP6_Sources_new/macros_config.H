@@ -10,5 +10,6 @@
 */
 
 #define _USES_SCHEDULER_        // uncomment to enable FIFO scheduling
+#define _THREADSAFE_DISK_       // uncomment to verify thread safe disk behavior
 // #define _TERMINATING_FUNCTIONS_ // uncomment to terminate threads 1 and 2 in kernel.c
 // #define _RR_SCHEDULER_          // uncomment to enable Round-Robin
