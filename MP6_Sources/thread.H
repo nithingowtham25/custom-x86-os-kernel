@@ -1,4 +1,4 @@
-/*
+/* 
     File: thread.H
 
     Author: Nithin Gowtham Saravanan
@@ -86,9 +86,8 @@ public:
     /* Returns the currently running thread. nullptr if no thread has started 
        yet. */
 
-    /* Accessors used by Scheduler for safe cleanup (zombie reaper) */
-    /* These provide minimal, controlled access to stack base/size so the scheduler
-       can free resources when reaping zombies. */
+    /* Accessors that were originally added for more advanced schedulers.
+       Not strictly needed in this MP, but kept for compatibility. */
     char * get_stack_base() { return stack; }
     unsigned int get_stack_size() { return stack_size; }
 };

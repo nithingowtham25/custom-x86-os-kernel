@@ -9,6 +9,8 @@
         "mem_pool.C": "cpp",
         "thread.C": "cpp",
         "scheduler.C": "cpp",
-        "simple_timer.C": "cpp"
+        "simple_timer.C": "cpp",
+        "nonblocking_disk.C": "cpp",
+        "simple_disk.C": "cpp"
     }
 }

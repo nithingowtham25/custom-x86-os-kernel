@@ -80,16 +80,18 @@ extern "C" void thread_shutdown() {
        This is a bit complicated because the thread termination interacts with the scheduler.
      */
 
-    #ifdef _USES_SCHEDULER_
-        SYSTEM_SCHEDULER->terminate_self(); // switches away; never returns
-        /* not reached */
-    #else
-        /* No scheduler */
-        for(;;) 
-        { 
-            /* spin forever to avoid falling off the stack */ 
-        }
-    #endif
+#ifdef _USES_SCHEDULER_
+    /* For this MP, thread functions never return in kernel.C's test harness.
+       If they do, delegate to the scheduler's terminate_self() helper. */
+    SYSTEM_SCHEDULER->terminate_self(); // switches away; never returns
+    /* not reached */
+#else
+    /* No scheduler: spin forever to avoid falling off the stack. */
+    for(;;) 
+    { 
+        /* spin forever to avoid falling off the stack */ 
+    }
+#endif
 }
 
 extern "C" void thread_start() {
