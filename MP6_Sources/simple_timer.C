@@ -97,4 +97,19 @@ void SimpleTimer::wait(unsigned long _seconds) {
     while((seconds <= then_seconds) && (ticks < now_ticks));
 }
 
+#ifdef _RR_SCHEDULER_
+#include "scheduler.H"   /* for SYSTEM_SCHEDULER declaration */
+extern Scheduler* SYSTEM_SCHEDULER;
 
+EOQTimer::EOQTimer(int quantum_ms)
+  : SimpleTimer((quantum_ms > 0) ? (1000 / quantum_ms) : 20) {}
+
+/* Delegate to the scheduler’s IRQ-safe preemption hook. */
+void EOQTimer::handle_interrupt(REGS* /*_r*/) {
+#ifdef _USES_SCHEDULER_
+  if (SYSTEM_SCHEDULER) {
+    SYSTEM_SCHEDULER->eoq_preempt_isr();  /* IRQ context; no prints, no (en|dis)able */
+  }
+#endif
+}
+#endif

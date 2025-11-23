@@ -1,10 +1,10 @@
 /* 
     File: thread.C
 
-    Author: R. Bettati
-            Department of Computer Science
+    Author: Nithin Gowtham Saravanan
+            Department of Electrical and Computer Engineering
             Texas A&M University
-    Date  : 11/10/25
+    Date  : 11/01/2025
 
 
     This code does the low-level management of kernel-level threads.
@@ -29,14 +29,16 @@
 /*--------------------------------------------------------------------------*/
 
 #include "assert.H"
-#include "utils.H"
 #include "console.H"
-
 #include "frame_pool.H"
-
 #include "thread.H"
-
 #include "threads_low.H"
+#include "machine.H"
+#include "macros_config.H"
+
+#ifdef _USES_SCHEDULER_
+#include "scheduler.H"
+#endif
 
 /*--------------------------------------------------------------------------*/
 /* EXTERNS */
@@ -46,11 +48,15 @@ Thread * current_thread = 0;
 /* Pointer to the currently running thread. This is used by the scheduler,
    for example. */
 
+#ifdef _USES_SCHEDULER_
+extern Scheduler * SYSTEM_SCHEDULER;
+#endif
+
 /* -------------------------------------------------------------------------*/
 /* LOCAL DATA PRIVATE TO THREAD AND DISPATCHER CODE */
 /* -------------------------------------------------------------------------*/
 
-int Thread::nextFreePid;
+int Thread::nextFreePid = 1;    /* initialize pid counter */
 
 /* -------------------------------------------------------------------------*/
 /* LOCAL FUNCTIONS */
@@ -68,22 +74,30 @@ inline void Thread::push(unsigned long _val) {
 /* -------------------------------------------------------------------------*/
 /* LOCAL FUNCTIONS TO START/SHUTDOWN THREADS. */
 
-static void thread_shutdown() {
+extern "C" void thread_shutdown() {
     /* This function should be called when the thread returns from the thread function.
        It terminates the thread by releasing memory and any other resources held by the thread. 
        This is a bit complicated because the thread termination interacts with the scheduler.
      */
 
-    assert(false);
-    /* Let's not worry about it for now. 
-       This means that we should have non-terminating thread functions. 
-    */
+    #ifdef _USES_SCHEDULER_
+        SYSTEM_SCHEDULER->terminate_self(); // switches away; never returns
+        /* not reached */
+    #else
+        /* No scheduler */
+        for(;;) 
+        { 
+            /* spin forever to avoid falling off the stack */ 
+        }
+    #endif
 }
 
-static void thread_start() {
+extern "C" void thread_start() {
      /* This function is used to release the thread for execution in the ready queue. */
     
      /* We need to add code, but it is probably nothing more than enabling interrupts. */
+     Machine::enable_interrupts();      /* allow timer/IRQs once running */
+     return;                            /* 'ret' to thread function (pre-pushed) */
 }
 
 void Thread::setup_context(Thread_Function _tfunction){
@@ -205,7 +219,6 @@ void Thread::dispatch_to(Thread * _thread) {
     /* The call does not return until after the thread is context-switched back in. */
 }
        
-
 Thread * Thread::CurrentThread() {
 /* Return the currently running thread. */
     return current_thread;

@@ -54,7 +54,7 @@
 							/* YOU MAY NEED TO INCLUDE nonblocking_disk.H */
 
 #include "system.H"         /* SYSTEM COMPONENTS: SCHEDULER, MEMORY, DISK */
-
+#include "macros_config.H"
 /*--------------------------------------------------------------------------*/
 /* MEMORY MANAGEMENT */
 /*--------------------------------------------------------------------------*/

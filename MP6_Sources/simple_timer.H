@@ -27,6 +27,8 @@
 /*--------------------------------------------------------------------------*/
 
 #include "interrupts.H"
+#include "thread.H"
+#include "scheduler.H"
 
 /*--------------------------------------------------------------------------*/
 /* S I M P L E   T I M E R  */
@@ -66,5 +68,20 @@ public :
      on busy looping! */
 
 };
+
+#ifdef _RR_SCHEDULER_
+/*--------------------------------------------------------------------------*/
+/* E O Q   T i m e r   (Round-robin quantum timer)                          */
+/*--------------------------------------------------------------------------*/
+/* A periodic timer used by the RR scheduler. On every tick, it informs the
+   scheduler that the time slice has ended so the running thread may be
+   preempted. This is installed on IRQ0 instead of SimpleTimer in RR builds. */
+class EOQTimer : public SimpleTimer {
+public:
+  /* quantum_ms: time slice in milliseconds (e.g., 50 for 20Hz preemption). */
+  explicit EOQTimer(int quantum_ms);
+  virtual void handle_interrupt(REGS* _r);
+};
+#endif
 
 #endif
