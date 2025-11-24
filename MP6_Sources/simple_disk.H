@@ -93,7 +93,7 @@ protected:
 	   In more sophisticated disk implementations, the thread may give up the CPU
 	   and return to check later. */
 
-private:
+protected:
 
 	/*--------------------------------------------------------------------------*/
 	/* INTERNAL STUFF TO ACCESS/CONTROL IDE DISK CONTROLLER USING ATA PROTOCOL. */

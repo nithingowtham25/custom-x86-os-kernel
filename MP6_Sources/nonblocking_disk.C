@@ -1,85 +1,152 @@
 /*
-     File        : nonblocking_disk.C
+ * File        : nonblocking_disk.C
+ * Author      : Nithin Gowtham Saravanan
+ * Description : Non-blocking and (optionally) thread-safe disk implementation.
+ */
 
-     Author      : Nithin Gowtham Saravanan
-
-     Description : Non-blocking disk implementation.
-                   Optional thread-safe mode (Options 1 & 2) can be enabled
-                   via _THREADSAFE_DISK_.
-*/
-
-/*--------------------------------------------------------------------------*/
-/* INCLUDES */
-/*--------------------------------------------------------------------------*/
-
-#include "assert.H"
-#include "utils.H"
-#include "console.H"
 #include "nonblocking_disk.H"
-#include "scheduler.H"
-#include "system.H"
-#include "macros_config.H"
-#include "interrupts.H"
-#include "thread.H"
+#include "assert.H"
+#include "console.H"
 #include "machine.H"
+#include "system.H"
+#include "scheduler.H"
 
 /*--------------------------------------------------------------------------*/
 /* CONSTRUCTOR */
 /*--------------------------------------------------------------------------*/
 
-NonBlockingDisk::NonBlockingDisk(unsigned int _size) 
+NonBlockingDisk::NonBlockingDisk(unsigned int _size)
     : SimpleDisk(_size)
-#ifdef _USES_SCHEDULER_
-    , InterruptHandler()
+#ifdef _THREADSAFE_DISK_
+    , lock_held(false)
+#endif
+#if defined(_USES_SCHEDULER_) && defined(_DISK_MASK_INTERRUPTS_)
+    , irq_fired(false)
 #endif
 {
 #ifdef _USES_SCHEDULER_
-    /* Register this disk as handler for IRQ 14.
-       This avoids the "NO DEFAULT INTERRUPT HANDLER REGISTERED" spam when the
-       disk raises an interrupt. */
+    // Register this disk as the handler for IRQ14 (primary IDE).
+    // For Options 1 & 2 we don't *use* the interrupt, we just silence
+    // the default "NO DEFAULT INTERRUPT HANDLER" messages.
+    // For Option 3, we also use it to set irq_fired.
     InterruptHandler::register_handler(14, this);
 #endif
 }
 
 /*--------------------------------------------------------------------------*/
-/* THREAD-SAFE READ/WRITE (Options 1 and 2, flag-controlled)                */
+/* WAIT-WHILE-BUSY (NON-BLOCKING BEHAVIOR) */
 /*--------------------------------------------------------------------------*/
 
-#if defined(_USES_SCHEDULER_) && defined(_THREADSAFE_DISK_)
+void NonBlockingDisk::wait_while_busy()
+{
+#ifndef _USES_SCHEDULER_
+
+    // No scheduler: fall back to original busy-wait from SimpleDisk.
+    SimpleDisk::wait_while_busy();
+    return;
+
+#else // _USES_SCHEDULER_ is defined
+
+# ifdef _DISK_MASK_INTERRUPTS_
+
+    /*
+     * Option 3: interrupt-hinted waiting.
+     *
+     * This function is called by SimpleDisk::ide_polling(), which expects:
+     *   - We only return once BSY is cleared.
+     *   - We don't break the ATA protocol or status polling.
+     *
+     * We therefore:
+     *   - Loop while is_busy() is true.
+     *   - Between checks, yield the CPU.
+     *   - If IRQ14 fires, handle_interrupt() sets irq_fired; here we
+     *     notice it, clear it, and immediately re-check is_busy().
+     *
+     * All the advanced error checking is still done in ide_polling()
+     * exactly as before, so SimpleDisk's assertions remain valid.
+     */
+
+    assert(System::SCHEDULER != nullptr);
+
+    while (is_busy()) {
+        // If an interrupt fired, the disk likely changed state; just clear
+        // the flag and let the top of the loop re-check is_busy().
+        if (irq_fired) {
+            irq_fired = false;
+            continue;
+        }
+
+        // Let other threads run while we wait for BSY to drop.
+        System::SCHEDULER->yield();
+    }
+
+    return;
+
+# else  // !_DISK_MASK_INTERRUPTS_
+
+    /*
+     * Options 1 & 2: scheduler-based polling.
+     *
+     * We repeatedly check the disk status, but between checks we yield
+     * the CPU so other threads can run.
+     */
+    while (is_busy()) {
+        if (System::SCHEDULER != nullptr) {
+            System::SCHEDULER->yield();
+        } else {
+            // Safety fallback if scheduler isn't initialized for some reason.
+            SimpleDisk::wait_while_busy();
+            break;
+        }
+    }
+    return;
+
+# endif // _DISK_MASK_INTERRUPTS_
+
+#endif  // _USES_SCHEDULER_
+}
+
+/*--------------------------------------------------------------------------*/
+/* THREAD-SAFE READ/WRITE WRAPPERS (OPTION 2) */
+/*--------------------------------------------------------------------------*/
+
+#ifdef _THREADSAFE_DISK_
 
 void NonBlockingDisk::lock_disk()
 {
-    Thread* me = Thread::CurrentThread();
-    assert(me != nullptr);
+    // Simple spin-lock with scheduler-friendly yielding when available.
+#ifdef _USES_SCHEDULER_
     assert(System::SCHEDULER != nullptr);
+#endif
 
     for (;;) {
         Machine::disable_interrupts();
-        if (!disk_locked) {
-            /* Acquire the lock. */
-            disk_locked = true;
+        if (!lock_held) {
+            lock_held = true;
             Machine::enable_interrupts();
             return;
         }
-        /* Lock is held by some other thread; back off cooperatively. */
         Machine::enable_interrupts();
 
-        /* Give some other ready thread a chance to run and possibly
-           release the lock. This avoids tight spinning. */
-        System::SCHEDULER->yield();
+#ifdef _USES_SCHEDULER_
+        // Let the lock holder (and other threads) run.
+        if (System::SCHEDULER != nullptr) {
+            System::SCHEDULER->yield();
+        }
+#endif
+        // If no scheduler, this is just a busy loop.
     }
 }
 
 void NonBlockingDisk::unlock_disk()
 {
     Machine::disable_interrupts();
-    disk_locked = false;
+    lock_held = false;
     Machine::enable_interrupts();
 }
 
 void NonBlockingDisk::read(unsigned long _block_no, unsigned char* _buf)
 {
-    /* Thread-safe: serialize full disk operations. */
     lock_disk();
     SimpleDisk::read(_block_no, _buf);
     unlock_disk();
@@ -87,56 +154,35 @@ void NonBlockingDisk::read(unsigned long _block_no, unsigned char* _buf)
 
 void NonBlockingDisk::write(unsigned long _block_no, unsigned char* _buf)
 {
-    /* Thread-safe: serialize full disk operations. */
     lock_disk();
     SimpleDisk::write(_block_no, _buf);
     unlock_disk();
 }
 
-#endif /* _USES_SCHEDULER_ && _THREADSAFE_DISK_ */
+#endif // _THREADSAFE_DISK_
 
 /*--------------------------------------------------------------------------*/
-/* METHODS FOR CLASS   N o n B l o c k i n g   D i s k                      */
+/* IRQ14 HANDLER */
 /*--------------------------------------------------------------------------*/
 
-void NonBlockingDisk::wait_while_busy()
-{
 #ifdef _USES_SCHEDULER_
-    /* 
-       Non-blocking behavior with scheduler:
-
-       - While the disk controller reports "busy", yield the CPU so other
-         threads can run instead of spinning.
-       - If the scheduler isn't ready yet, fall back to the base behavior.
-    */
-    while (is_busy()) {
-        if (System::SCHEDULER != nullptr) {
-            System::SCHEDULER->yield();
-        } else {
-            /* Scheduler not initialized yet; safest is to use base behavior. */
-            SimpleDisk::wait_while_busy();
-            break;
-        }
-    }
+void NonBlockingDisk::handle_interrupt(REGS* /*regs*/)
+{
+#ifdef _DISK_MASK_INTERRUPTS_
+    /*
+     * IMPORTANT:
+     *  - Do NOT call Machine::disable_interrupts(), Machine::enable_interrupts(),
+     *    or any Scheduler method from here. The machine layer has assertions
+     *    about interrupt state.
+     *  - Just record the fact that an IDE interrupt occurred. The waiting
+     *    thread in wait_while_busy() will see this and re-check the disk.
+     */
+    irq_fired = true;
 #else
-    /* No scheduler in this build – use the original busy-wait behavior. */
-    SimpleDisk::wait_while_busy();
+    // Options 1 & 2:
+    // We don't do anything with the interrupt; we just implement this handler
+    // so the default "NO DEFAULT INTERRUPT HANDLER REGISTERED" doesn't fire.
+    (void)0;
 #endif
-}
-
-#ifdef _USES_SCHEDULER_
-void NonBlockingDisk::handle_interrupt(REGS* /*_regs*/)
-{
-    /* 
-       We are only installing this handler to consume IRQ 14 so the
-       generic dispatcher doesn't print the "NO DEFAULT INTERRUPT
-       HANDLER REGISTERED" message.
-
-       The actual PIO protocol (status register reads, etc.) is still
-       handled in the polling code (SimpleDisk + wait_while_busy()).
-       The PIC EOI is sent by the generic IRQ dispatcher after this
-       handler returns, so we don't need to do anything here.
-    */
-    /* intentionally empty */
 }
 #endif

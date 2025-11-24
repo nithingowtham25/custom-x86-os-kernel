@@ -10,6 +10,7 @@
 */
 
 #define _USES_SCHEDULER_        // uncomment to enable FIFO scheduling
-#define _THREADSAFE_DISK_       // uncomment to verify thread safe disk behavior
+#define _THREADSAFE_DISK_       // uncomment to verify thread safe disk behavior (MP6 Option 2)
+#define _DISK_MASK_INTERRUPTS_  // Enable interrupt-driven disk bottom half (MP6 Option 3)
 // #define _TERMINATING_FUNCTIONS_ // uncomment to terminate threads 1 and 2 in kernel.c
 // #define _RR_SCHEDULER_          // uncomment to enable Round-Robin
