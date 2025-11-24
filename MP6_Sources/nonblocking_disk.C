@@ -25,10 +25,9 @@ NonBlockingDisk::NonBlockingDisk(unsigned int _size)
 #endif
 {
 #ifdef _USES_SCHEDULER_
-    // Register this disk as the handler for IRQ14 (primary IDE).
-    // For Options 1 & 2 we don't *use* the interrupt, we just silence
-    // the default "NO DEFAULT INTERRUPT HANDLER" messages.
-    // For Option 3, we also use it to set irq_fired.
+    /* For Options 1 & 2 we don't *use* the interrupt, we just silence
+       the default "NO DEFAULT INTERRUPT HANDLER" messages.
+       For Option 3, we also use it to set irq_fired.*/
     InterruptHandler::register_handler(14, this);
 #endif
 }
@@ -49,22 +48,10 @@ void NonBlockingDisk::wait_while_busy()
 
 # ifdef _DISK_MASK_INTERRUPTS_
 
-    /*
-     * Option 3: interrupt-hinted waiting.
-     *
-     * This function is called by SimpleDisk::ide_polling(), which expects:
-     *   - We only return once BSY is cleared.
-     *   - We don't break the ATA protocol or status polling.
-     *
-     * We therefore:
-     *   - Loop while is_busy() is true.
-     *   - Between checks, yield the CPU.
-     *   - If IRQ14 fires, handle_interrupt() sets irq_fired; here we
-     *     notice it, clear it, and immediately re-check is_busy().
-     *
-     * All the advanced error checking is still done in ide_polling()
-     * exactly as before, so SimpleDisk's assertions remain valid.
-     */
+    /*  - Loop while is_busy() is true.
+        - Between checks, yield the CPU.
+        - If IRQ14 fires, handle_interrupt() sets irq_fired; here we
+          notice it, clear it, and immediately re-check is_busy(). */
 
     assert(System::SCHEDULER != nullptr);
 
@@ -84,12 +71,7 @@ void NonBlockingDisk::wait_while_busy()
 
 # else  // !_DISK_MASK_INTERRUPTS_
 
-    /*
-     * Options 1 & 2: scheduler-based polling.
-     *
-     * We repeatedly check the disk status, but between checks we yield
-     * the CPU so other threads can run.
-     */
+    /* Options 1 & 2: scheduler-based polling. */
     while (is_busy()) {
         if (System::SCHEDULER != nullptr) {
             System::SCHEDULER->yield();
@@ -169,19 +151,11 @@ void NonBlockingDisk::write(unsigned long _block_no, unsigned char* _buf)
 void NonBlockingDisk::handle_interrupt(REGS* /*regs*/)
 {
 #ifdef _DISK_MASK_INTERRUPTS_
-    /*
-     * IMPORTANT:
-     *  - Do NOT call Machine::disable_interrupts(), Machine::enable_interrupts(),
-     *    or any Scheduler method from here. The machine layer has assertions
-     *    about interrupt state.
-     *  - Just record the fact that an IDE interrupt occurred. The waiting
-     *    thread in wait_while_busy() will see this and re-check the disk.
-     */
+    /* record the fact that an IDE interrupt occurred. The waiting
+       thread in wait_while_busy() will see this and re-check the disk. */
     irq_fired = true;
 #else
-    // Options 1 & 2:
-    // We don't do anything with the interrupt; we just implement this handler
-    // so the default "NO DEFAULT INTERRUPT HANDLER REGISTERED" doesn't fire.
+    // Options 1 & 2 - don't do anything 
     (void)0;
 #endif
 }
