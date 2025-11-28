@@ -1,8 +1,8 @@
 /*
      File        : file.H
 
-     Author      : Riccardo Bettati
-     Modified    : 2021/11/18
+     Author      : Nithin Gowtham Saravanan
+     Modified    : 11/27/2025
 
      Description : Simple File class with sequential read/write operations.
  
@@ -49,6 +49,10 @@ private:
        file system. 
        You may also want a current position, which indicates which position in 
        the file you will read or write next. */
+
+    FileSystem*   fs;         /* Back-pointer to file system.        */
+    Inode*        inode;      /* Inode describing this file.         */
+    unsigned int  current_pos;/* Current file position for I/O.      */
     
     unsigned char block_cache[SimpleDisk::BLOCK_SIZE];
     /* It will be helpful to have a cached copy of the block that you are reading
