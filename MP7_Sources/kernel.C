@@ -280,100 +280,104 @@ int main() {
 	}
 
 #ifdef LARGE_FILE_SUPPORT
-	/* -- BONUS TEST: Exercise large-file support (up to 64kB) with two files -- */
-	{
-		Console::puts("Running bonus test: large file support with two files\n");
+    /* -- BONUS TEST: Stress-test large file support with two files for 30 iterations -- */
+    for (int iter = 0; iter < 30; iter++) {
 
-		const unsigned int BIG_FILE1_ID = 10;
-		const unsigned int BIG_FILE2_ID = 11;
-		const unsigned int BIG_SIZE     = 64 * 1024; /* 64kB */
+        Console::puts("exercise LARGE file system; iteration ");
+        Console::puti(iter);
+        Console::puts("...\n");
 
-		static char big1_write_buf[64 * 1024];
-		static char big2_write_buf[64 * 1024];
-		static char big1_read_buf[64 * 1024];
-		static char big2_read_buf[64 * 1024];
+        const unsigned int BIG_FILE1_ID = 10;
+        const unsigned int BIG_FILE2_ID = 11;
+        const unsigned int BIG_SIZE     = 64 * 1024; /* 64kB */
 
-		/* -- Initialize write buffers -- */
-		Console::puts("Initializing content of Big File 1 and Big File 2\n");
-		for (unsigned int i = 0; i < BIG_SIZE; ++i) {
-			big1_write_buf[i] = (char)(i & 0xFF);                   /* increasing pattern  */
-			big2_write_buf[i] = (char)((BIG_SIZE - 1 - i) & 0xFF);  /* decreasing pattern  */
-		}
+        static char big1_write_buf[64 * 1024];
+        static char big2_write_buf[64 * 1024];
+        static char big1_read_buf[64 * 1024];
+        static char big2_read_buf[64 * 1024];
 
-		/* -- Create two big files -- */
-		Console::puts("Creating Big File 1 and Big File 2\n");
-		assert(FILE_SYSTEM->CreateFile(BIG_FILE1_ID));
-		assert(FILE_SYSTEM->CreateFile(BIG_FILE2_ID));
+        /* -- Initialize write buffers (pattern depends on iteration) -- */
+        Console::puts("Initializing content of Big File 1 and Big File 2\n");
 
-		/* -- "Open" the two big files for writing -- */
-		{
-			Console::puts("Opening Big File 1 and Big File 2\n");
+        for (unsigned int i = 0; i < BIG_SIZE; ++i) {
+            if (iter % 2 == 0) {
+                big1_write_buf[i] = (char)(i & 0xFF);
+                big2_write_buf[i] = (char)((BIG_SIZE - 1 - i) & 0xFF);
+            } else {
+                big1_write_buf[i] = (char)((i * 7) & 0xFF);
+                big2_write_buf[i] = (char)((i * 13) & 0xFF);
+            }
+        }
 
-			File big1(FILE_SYSTEM, BIG_FILE1_ID);
-			File big2(FILE_SYSTEM, BIG_FILE2_ID);
+        /* -- Create two big files -- */
+        Console::puts("Creating Big File 1 and Big File 2\n");
+        assert(FILE_SYSTEM->CreateFile(BIG_FILE1_ID));
+        assert(FILE_SYSTEM->CreateFile(BIG_FILE2_ID));
 
-			Console::puts("Writing into Big File 1 and Big File 2\n");
+        /* -- Open and write both big files -- */
+        {
+            Console::puts("Opening Big File 1 and Big File 2\n");
 
-			int written1 = big1.Write(BIG_SIZE, big1_write_buf);
-			int written2 = big2.Write(BIG_SIZE, big2_write_buf);
+            File big1(FILE_SYSTEM, BIG_FILE1_ID);
+            File big2(FILE_SYSTEM, BIG_FILE2_ID);
 
-			Console::puts("Bytes written to Big File 1: "); Console::puti(written1); Console::puts("\n");
-			Console::puts("Bytes written to Big File 2: "); Console::puti(written2); Console::puts("\n");
+            Console::puts("Writing into Big File 1 and Big File 2\n");
 
-			assert((unsigned int)written1 == BIG_SIZE);
-			assert((unsigned int)written2 == BIG_SIZE);
+            int written1 = big1.Write(BIG_SIZE, big1_write_buf);
+            int written2 = big2.Write(BIG_SIZE, big2_write_buf);
 
-			/* -- Files will get automatically closed when we leave scope  -- */
+            Console::puts("Bytes written to Big File 1: "); Console::puti(written1); Console::puts("\n");
+            Console::puts("Bytes written to Big File 2: "); Console::puti(written2); Console::puts("\n");
 
-			Console::puts("Closing Big File 1 and Big File 2\n");
-		}
+            assert((unsigned int)written1 == BIG_SIZE);
+            assert((unsigned int)written2 == BIG_SIZE);
 
-		/* -- "Open" the big files again for reading and checking content -- */
-		{
-			Console::puts("Opening Big File 1 and Big File 2 again\n");
+            Console::puts("Closing Big File 1 and Big File 2\n");
+        }
 
-			File big1(FILE_SYSTEM, BIG_FILE1_ID);
-			File big2(FILE_SYSTEM, BIG_FILE2_ID);
+        /* -- Open again, read, check content -- */
+        {
+            Console::puts("Opening Big File 1 and Big File 2 again\n");
 
-			Console::puts("Checking content of Big File 1 and Big File 2\n");
+            File big1(FILE_SYSTEM, BIG_FILE1_ID);
+            File big2(FILE_SYSTEM, BIG_FILE2_ID);
 
-			big1.Reset();
-			big2.Reset();
+            Console::puts("Checking content of Big File 1 and Big File 2\n");
 
-			Console::puts("Reading from Big File 1 and Big File 2\n");
+            big1.Reset();
+            big2.Reset();
 
-			int read1 = big1.Read(BIG_SIZE, big1_read_buf);
-			int read2 = big2.Read(BIG_SIZE, big2_read_buf);
+            int read1 = big1.Read(BIG_SIZE, big1_read_buf);
+            int read2 = big2.Read(BIG_SIZE, big2_read_buf);
 
-			Console::puts("Bytes read from Big File 1: "); Console::puti(read1); Console::puts("\n");
-			Console::puts("Bytes read from Big File 2: "); Console::puti(read2); Console::puts("\n");
+            Console::puts("Bytes read from Big File 1: "); Console::puti(read1); Console::puts("\n");
+            Console::puts("Bytes read from Big File 2: "); Console::puti(read2); Console::puts("\n");
 
-			assert((unsigned int)read1 == BIG_SIZE);
-			assert((unsigned int)read2 == BIG_SIZE);
+            assert((unsigned int)read1 == BIG_SIZE);
+            assert((unsigned int)read2 == BIG_SIZE);
 
-			for (unsigned int i = 0; i < BIG_SIZE; ++i) {
-				assert(big1_read_buf[i] == big1_write_buf[i]);
-				assert(big2_read_buf[i] == big2_write_buf[i]);
-			}
+            for (unsigned int i = 0; i < BIG_SIZE; ++i) {
+                assert(big1_read_buf[i] == big1_write_buf[i]);
+                assert(big2_read_buf[i] == big2_write_buf[i]);
+            }
 
-			Console::puts("SUCCESS for large files!!\n");
+            Console::puts("SUCCESS for large files!!\n");
 
-			Console::puts("Closing Big File 1 and Big File 2 again\n");
-		}
+            Console::puts("Closing Big File 1 and Big File 2 again\n");
+        }
 
-		/* -- Delete both big files -- */
+        /* -- Delete both big files -- */
+        Console::puts("Deleting Big File 1 and Big File 2\n");
 
-		Console::puts("Deleting Big File 1 and Big File 2\n");
+        assert(FILE_SYSTEM->DeleteFile(BIG_FILE1_ID));
+        assert(FILE_SYSTEM->LookupFile(BIG_FILE1_ID) == nullptr);
 
-		assert(FILE_SYSTEM->DeleteFile(BIG_FILE1_ID));
-		assert(FILE_SYSTEM->LookupFile(BIG_FILE1_ID) == nullptr);
+        assert(FILE_SYSTEM->DeleteFile(BIG_FILE2_ID));
+        assert(FILE_SYSTEM->LookupFile(BIG_FILE2_ID) == nullptr);
 
-		assert(FILE_SYSTEM->DeleteFile(BIG_FILE2_ID));
-		assert(FILE_SYSTEM->LookupFile(BIG_FILE2_ID) == nullptr);
+        Console::puts("iteration done for large file\n");
+    }
 
-		Console::puts("Verified deletion of Big File 1 and Big File 2\n");
-		Console::puts("Large file test with two files completed successfully.\n");
-	}
 #endif
 
 	Console::puts("EXCELLENT! Your File system seems to work correctly. Congratulations!!\n");
