@@ -4,7 +4,7 @@
 	Author: Nithin Gowtham Saravanan
 			Department of Electrical and Computer Engineering
 			Texas A&M University
-	Date  : 11/27/2025
+	Date  : 12/05/2025
 
 	Description: Simple File System.
 */
@@ -23,6 +23,7 @@
 /*--------------------------------------------------------------------------*/
 
 #include "simple_disk.H"
+#include "macros_config.H"
 
 /*--------------------------------------------------------------------------*/
 /* FORWARDS */
@@ -46,9 +47,15 @@ private:
 	/* You will need additional information in the inode, such as allocation
 	   information. */
 
-	unsigned int block_no;   /* Single data block allocated to this file.   */
-	unsigned int length;     /* Current length of the file in Byte.        */
-	bool         used;       /* True if this inode currently describes a file. */
+#ifdef LARGE_FILE_SUPPORT
+	static const unsigned int MAX_FILE_BLOCKS = SimpleDisk::BLOCK_SIZE / sizeof(unsigned int);
+	unsigned int index_block_no;           /* Block holding the list of data blocks. */
+#else
+	unsigned int block_no;                 /* Single data block.                     */
+#endif
+
+	unsigned int length;                   /* File length in Byte.                   */
+	bool         used;                     /* Indicates whether this inode is used.  */
 
 	FileSystem* fs; // It may be handy to have a pointer to the File system.
 	// For example when you need a new block or when you want
@@ -73,6 +80,7 @@ class FileSystem
 {
 
 	friend class Inode;
+	friend class File;
 
 private:
 	/* -- DEFINE YOUR FILE SYSTEM DATA STRUCTURES HERE. */
@@ -102,31 +110,41 @@ private:
 	   blocks. These functions also come useful to class Inode and File. */
 
 	short GetFreeInode();
-	/* Find index of a free inode in the inode list, or -1 if none available. */
+	/* Find a free inode index, or -1 if none is available. */
 
 	int   GetFreeBlock();
-	/* Find index of a free data block (excluding metadata blocks), or -1 if none. */
+	/* Find a free data block index, or -1 if none is available. */
 
 	void load_inodes();
-	/* Read the inode list from the INODES block on disk into memory. */
+	/* Read inode list from disk into memory. */
 
 	void save_inodes();
-	/* Write the in-memory inode list back to the INODES block on disk. */
+	/* Write inode list from memory back to disk. */
 
 	void load_freelist();
-	/* Read and decode the free-block list from the FREELIST block. */
+	/* Read free-block information from disk into memory. */
 
 	void save_freelist();
-	/* Encode and write the free-block list back to the FREELIST block. */
+	/* Write free-block information from memory back to disk. */
 
 	static void set_block_used(unsigned char* _buf, unsigned int _block_no);
-	/* Mark a block as used in the on-disk bitmap stored in _buf. */
+	/* Mark a block as used in the on-disk bitmap. */
 
 	static void set_block_free(unsigned char* _buf, unsigned int _block_no);
-	/* Mark a block as free in the on-disk bitmap stored in _buf. */
+	/* Mark a block as free in the on-disk bitmap. */
 
 	static bool is_block_used(const unsigned char* _buf, unsigned int _block_no);
-	/* Check whether a block is used in the on-disk bitmap stored in _buf. */
+	/* Check whether a block is used in the on-disk bitmap. */
+
+#ifdef LARGE_FILE_SUPPORT
+	unsigned int GetDataBlock(Inode* _inode,
+	                          unsigned int _logical_block_index,
+	                          bool _allocate);
+	/* Return physical block for logical index, optionally allocating it. */
+
+	void FreeAllBlocks(Inode* _inode);
+	/* Free all data blocks and the index block for the inode. */
+#endif
 
 public:
 	FileSystem();
@@ -154,9 +172,7 @@ public:
 	/* Delete file with given id in the file system; free any disk block occupied by the file. */
 
 	void FlushMetadata();
-	/* Flush in-memory metadata (inode list and free list) back to disk. */
-
-	/* Simple accessors used by the File class without exposing internals. */
+	/* Flush inode list and free-block list back to disk. */
 
 	SimpleDisk* GetDisk() { return disk; }
 	/* Return pointer to the underlying disk. */

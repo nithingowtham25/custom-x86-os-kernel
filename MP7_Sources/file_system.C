@@ -2,11 +2,11 @@
      File        : file_system.C
 
      Author      : Nithin Gowtham Saravanan
-     Modified    : 11/27/2025
+     Modified    : 12/05/2025
 
      Description : Implementation of simple File System class.
                    Has support for numerical file identifiers.
- */
+*/
 
 /*--------------------------------------------------------------------------*/
 /* DEFINES */
@@ -26,16 +26,9 @@
 /* LOCAL CONSTANTS */
 /*--------------------------------------------------------------------------*/
 
-static const unsigned int INODES_BLOCK    = 0; /* Block holding inode list.    */
-static const unsigned int FREELIST_BLOCK  = 1; /* Block holding free list.     */
-static const unsigned int METADATA_BLOCKS = 2; /* Number of metadata blocks.   */
-
-/*--------------------------------------------------------------------------*/
-/* CLASS Inode */
-/*--------------------------------------------------------------------------*/
-
-/* You may need to add a few functions, for example to help read and store 
-   inodes from and to disk. */
+static const unsigned int INODES_BLOCK    = 0;
+static const unsigned int FREELIST_BLOCK  = 1;
+static const unsigned int METADATA_BLOCKS = 2;
 
 /*--------------------------------------------------------------------------*/
 /* BITMAP HELPERS FOR FREE LIST */
@@ -73,7 +66,6 @@ bool FileSystem::is_block_used(const unsigned char* _buf, unsigned int _block_no
 FileSystem::FileSystem() {
 	Console::puts("In file system constructor.\n");
 
-	/* Initialize members to safe defaults. */
 	disk        = 0;
 	size        = 0;
 	inodes      = 0;
@@ -86,12 +78,10 @@ FileSystem::~FileSystem() {
 	/* Make sure that the inode list and the free list are saved. */
 
 	if (mounted && disk != 0) {
-		/* Persist metadata before tearing down in-memory state. */
 		save_inodes();
 		save_freelist();
 	}
 
-	/* Release dynamically allocated memory. */
 	if (inodes) {
 		delete[] inodes;
 		inodes = 0;
@@ -111,7 +101,7 @@ FileSystem::~FileSystem() {
 /*--------------------------------------------------------------------------*/
 
 void FileSystem::load_inodes() {
-	/* Read inode list from disk into the in-memory array. */
+	/* Read inode list from disk into memory. */
 
 	unsigned char buf[SimpleDisk::BLOCK_SIZE];
 	disk->read(INODES_BLOCK, buf);
@@ -129,7 +119,6 @@ void FileSystem::load_inodes() {
 		reinterpret_cast<unsigned char*>(inodes)[i] = buf[i];
 	}
 
-	/* Reattach FileSystem pointer for each inode. */
 	for (unsigned int i = 0; i < MAX_INODES; ++i) {
 		inodes[i].fs = this;
 	}
@@ -165,7 +154,6 @@ void FileSystem::load_freelist() {
 	unsigned char buf[SimpleDisk::BLOCK_SIZE];
 	disk->read(FREELIST_BLOCK, buf);
 
-	/* First 4 bytes store number of FS blocks. */
 	unsigned int fs_blocks = 0;
 	fs_blocks |= static_cast<unsigned int>(buf[0]);
 	fs_blocks |= static_cast<unsigned int>(buf[1]) << 8;
@@ -173,14 +161,12 @@ void FileSystem::load_freelist() {
 	fs_blocks |= static_cast<unsigned int>(buf[3]) << 24;
 
 	if (fs_blocks == 0) {
-		/* Disk does not seem to contain a formatted FS. */
 		size = 0;
 		return;
 	}
 
 	size = fs_blocks;
 
-	/* Allocate in-memory free-block list. */
 	if (free_blocks) {
 		delete[] free_blocks;
 	}
@@ -203,13 +189,11 @@ void FileSystem::save_freelist() {
 		buf[i] = 0;
 	}
 
-	/* Store size (in blocks) of file system. */
 	buf[0] = static_cast<unsigned char>(size & 0xFF);
 	buf[1] = static_cast<unsigned char>((size >> 8) & 0xFF);
 	buf[2] = static_cast<unsigned char>((size >> 16) & 0xFF);
 	buf[3] = static_cast<unsigned char>((size >> 24) & 0xFF);
 
-	/* Store free/used information as bitmap. */
 	for (unsigned int b = 0; b < size; ++b) {
 		if (free_blocks[b]) set_block_used(buf, b);
 		else                set_block_free(buf, b);
@@ -242,12 +226,83 @@ int FileSystem::GetFreeBlock() {
 
 	for (unsigned int b = METADATA_BLOCKS; b < size; ++b) {
 		if (!free_blocks[b]) {
-			free_blocks[b] = 1; /* Mark block as used. */
+			free_blocks[b] = 1;
 			return static_cast<int>(b);
 		}
 	}
 	return -1;
 }
+
+#ifdef LARGE_FILE_SUPPORT
+unsigned int FileSystem::GetDataBlock(Inode* _inode,
+                                      unsigned int _logical_block_index,
+                                      bool _allocate) {
+	/* Return physical block for logical index, optionally allocating it. */
+
+	if (!_inode) {
+		return 0;
+	}
+	if (_logical_block_index >= Inode::MAX_FILE_BLOCKS) {
+		return 0;
+	}
+	if (_inode->index_block_no == 0) {
+		return 0;
+	}
+
+	unsigned char index_buf[SimpleDisk::BLOCK_SIZE];
+	disk->read(_inode->index_block_no, index_buf);
+
+	unsigned int* entries = reinterpret_cast<unsigned int*>(index_buf);
+	unsigned int phys = entries[_logical_block_index];
+
+	if (!_allocate) {
+		return phys;
+	}
+
+	if (phys != 0) {
+		return phys;
+	}
+
+	int new_block = GetFreeBlock();
+	if (new_block < 0) {
+		return 0;
+	}
+
+	entries[_logical_block_index] = static_cast<unsigned int>(new_block);
+	disk->write(_inode->index_block_no, index_buf);
+
+	unsigned char zero_block[SimpleDisk::BLOCK_SIZE];
+	for (unsigned int i = 0; i < SimpleDisk::BLOCK_SIZE; ++i) {
+		zero_block[i] = 0;
+	}
+	disk->write(static_cast<unsigned int>(new_block), zero_block);
+
+	return static_cast<unsigned int>(new_block);
+}
+
+void FileSystem::FreeAllBlocks(Inode* _inode) {
+	/* Free all data blocks and the index block for the inode. */
+
+	if (!_inode || !_inode->index_block_no || !free_blocks) {
+		return;
+	}
+
+	unsigned char index_buf[SimpleDisk::BLOCK_SIZE];
+	disk->read(_inode->index_block_no, index_buf);
+
+	unsigned int* entries = reinterpret_cast<unsigned int*>(index_buf);
+	for (unsigned int i = 0; i < Inode::MAX_FILE_BLOCKS; ++i) {
+		unsigned int b = entries[i];
+		if (b >= METADATA_BLOCKS && b < size) {
+			free_blocks[b] = 0;
+		}
+	}
+
+	if (_inode->index_block_no >= METADATA_BLOCKS && _inode->index_block_no < size) {
+		free_blocks[_inode->index_block_no] = 0;
+	}
+}
+#endif
 
 /*--------------------------------------------------------------------------*/
 /* FILE SYSTEM FUNCTIONS */
@@ -263,17 +318,14 @@ bool FileSystem::Mount(SimpleDisk * _disk) {
 
 	disk = _disk;
 
-	/* Load free list first to know FS size. */
 	load_freelist();
 	if (size == 0) {
 		return false;
 	}
 
-	/* Sanity-check against underlying disk size. */
 	unsigned int disk_blocks = disk->NaiveSize() / SimpleDisk::BLOCK_SIZE;
 	assert(size <= disk_blocks);
 
-	/* Then load inode list. */
 	load_inodes();
 
 	mounted = true;
@@ -290,25 +342,26 @@ bool FileSystem::Format(SimpleDisk * _disk, unsigned int _size) { // static!
 		return false;
 	}
 
-	/* Compute number of blocks that belong to this file system. */
 	unsigned int fs_blocks = _size / SimpleDisk::BLOCK_SIZE;
 	if (fs_blocks < METADATA_BLOCKS) {
 		return false;
 	}
 
-	/* Check that single bitmap block can encode all blocks. */
 	unsigned int max_blocks_encodable = (SimpleDisk::BLOCK_SIZE - 4) * 8;
 	assert(fs_blocks <= max_blocks_encodable);
 
-	/* ---- Initialize inode block ---- */
+	Inode temp_inodes[FileSystem::MAX_INODES];
 
-	Inode empty_inodes[FileSystem::MAX_INODES];
 	for (unsigned int i = 0; i < FileSystem::MAX_INODES; ++i) {
-		empty_inodes[i].id       = -1;
-		empty_inodes[i].block_no = 0;
-		empty_inodes[i].length   = 0;
-		empty_inodes[i].used     = false;
-		empty_inodes[i].fs       = 0;
+		temp_inodes[i].id = -1;
+#ifdef LARGE_FILE_SUPPORT
+		temp_inodes[i].index_block_no = 0;
+#else
+		temp_inodes[i].block_no = 0;
+#endif
+		temp_inodes[i].length = 0;
+		temp_inodes[i].used   = false;
+		temp_inodes[i].fs     = 0;
 	}
 
 	unsigned char inode_buf[SimpleDisk::BLOCK_SIZE];
@@ -322,29 +375,23 @@ bool FileSystem::Format(SimpleDisk * _disk, unsigned int _size) { // static!
 	}
 
 	for (unsigned int i = 0; i < bytes_to_copy; ++i) {
-		inode_buf[i] = reinterpret_cast<unsigned char*>(empty_inodes)[i];
+		inode_buf[i] = reinterpret_cast<unsigned char*>(temp_inodes)[i];
 	}
 
 	_disk->write(INODES_BLOCK, inode_buf);
-
-	/* ---- Initialize FREELIST block ---- */
 
 	unsigned char freelist_buf[SimpleDisk::BLOCK_SIZE];
 	for (unsigned int i = 0; i < SimpleDisk::BLOCK_SIZE; ++i) {
 		freelist_buf[i] = 0;
 	}
 
-	/* Store FS size. */
 	freelist_buf[0] = static_cast<unsigned char>(fs_blocks & 0xFF);
 	freelist_buf[1] = static_cast<unsigned char>((fs_blocks >> 8) & 0xFF);
 	freelist_buf[2] = static_cast<unsigned char>((fs_blocks >> 16) & 0xFF);
 	freelist_buf[3] = static_cast<unsigned char>((fs_blocks >> 24) & 0xFF);
 
-	/* Mark metadata blocks as used. */
 	set_block_used(freelist_buf, INODES_BLOCK);
 	set_block_used(freelist_buf, FREELIST_BLOCK);
-
-	/* Data blocks remain free (bits = 0). */
 
 	_disk->write(FREELIST_BLOCK, freelist_buf);
 
@@ -377,38 +424,53 @@ bool FileSystem::CreateFile(int _file_id) {
 		return false;
 	}
 
-	/* Fail if file already exists. */
 	if (LookupFile(_file_id) != 0) {
 		return false;
 	}
 
-	/* Get free inode and free data block. */
 	short inode_index = GetFreeInode();
 	if (inode_index < 0) {
 		return false;
 	}
 
+	Inode& inode = inodes[inode_index];
+
+#ifdef LARGE_FILE_SUPPORT
+	int index_block = GetFreeBlock();
+	if (index_block < 0) {
+		return false;
+	}
+
+	inode.id            = static_cast<long>(_file_id);
+	inode.index_block_no = static_cast<unsigned int>(index_block);
+	inode.length        = 0;
+	inode.used          = true;
+	inode.fs            = this;
+
+	unsigned char index_buf[SimpleDisk::BLOCK_SIZE];
+	for (unsigned int i = 0; i < SimpleDisk::BLOCK_SIZE; ++i) {
+		index_buf[i] = 0;
+	}
+	disk->write(inode.index_block_no, index_buf);
+#else
 	int block_index = GetFreeBlock();
 	if (block_index < 0) {
 		return false;
 	}
 
-	/* Initialize inode fields. */
-	Inode& node = inodes[inode_index];
-	node.id       = static_cast<long>(_file_id);
-	node.block_no = static_cast<unsigned int>(block_index);
-	node.length   = 0;
-	node.used     = true;
-	node.fs       = this;
+	inode.id       = static_cast<long>(_file_id);
+	inode.block_no = static_cast<unsigned int>(block_index);
+	inode.length   = 0;
+	inode.used     = true;
+	inode.fs       = this;
 
-	/* Zero-initialize the new data block on disk. */
 	unsigned char zero_block[SimpleDisk::BLOCK_SIZE];
 	for (unsigned int i = 0; i < SimpleDisk::BLOCK_SIZE; ++i) {
 		zero_block[i] = 0;
 	}
-	disk->write(node.block_no, zero_block);
+	disk->write(inode.block_no, zero_block);
+#endif
 
-	/* Persist updated metadata. */
 	save_inodes();
 	save_freelist();
 
@@ -425,23 +487,24 @@ bool FileSystem::DeleteFile(int _file_id) {
 		return false;
 	}
 
-	Inode* node = LookupFile(_file_id);
-	if (!node) {
+	Inode* inode = LookupFile(_file_id);
+	if (!inode) {
 		return false;
 	}
 
-	/* Mark the file's data block as free. */
-	if (node->block_no < size && node->block_no >= METADATA_BLOCKS && free_blocks) {
-		free_blocks[node->block_no] = 0;
+#ifdef LARGE_FILE_SUPPORT
+	FreeAllBlocks(inode);
+	inode->index_block_no = 0;
+#else
+	if (inode->block_no < size && inode->block_no >= METADATA_BLOCKS && free_blocks) {
+		free_blocks[inode->block_no] = 0;
 	}
+#endif
 
-	/* Invalidate the inode. */
-	node->id       = -1;
-	node->block_no = 0;
-	node->length   = 0;
-	node->used     = false;
+	inode->id       = -1;
+	inode->length   = 0;
+	inode->used     = false;
 
-	/* Persist updated metadata. */
 	save_inodes();
 	save_freelist();
 

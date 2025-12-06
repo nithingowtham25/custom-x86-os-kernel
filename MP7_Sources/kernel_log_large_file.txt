@@ -870,9 +870,9 @@ looking up file with id = 2
 looking up file with id = 2
 iteration done
 exercise file system; iteration 22...
-One second has passed
 Creating File 1 and File 2
 creating file with id:1
+One second has passed
 looking up file with id = 1
 creating file with id:2
 looking up file with id = 2
@@ -1182,9 +1182,64 @@ deleting file with id:2
 looking up file with id = 2
 looking up file with id = 2
 iteration done
+Running bonus test: large file support with two files
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+Reading from Big File 1 and Big File 2
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+Verified deletion of Big File 1 and Big File 2
+Large file test with two files completed successfully.
 EXCELLENT! Your File system seems to work correctly. Congratulations!!
-Assertion failed at file: kernel.C line: 285 assertion: false
+Assertion failed at file: kernel.C line: 383 assertion: false
 One second has passed
 One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+INTERRUPT NO: 1
+NO DEFAULT INTERRUPT HANDLER REGISTERED
 One second has passed
 qemu: terminating on signal 2

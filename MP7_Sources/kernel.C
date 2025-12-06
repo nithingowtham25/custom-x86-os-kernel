@@ -1,11 +1,10 @@
 /*
 	File: kernel.C
 
-	Author: R. Bettati
-			Department of Computer Science
+	Author: Nithin Gowtham Saravanan
+			Department of Electrical and Computer Engineering
 			Texas A&M University
-	Date  : 2024/12/03
-
+	Date  : 12/05/2025
 
 	This file has the main entry point to the operating system.
 
@@ -43,6 +42,7 @@
 
 #include "file_system.H"     /* FILE SYSTEM */
 #include "file.H"
+#include "macros_config.H"
 
 /*--------------------------------------------------------------------------*/
 /* MEMORY MANAGEMENT */
@@ -278,6 +278,103 @@ int main() {
 		exercise_file_system(FILE_SYSTEM, j);
 		Console::puts("iteration done\n");
 	}
+
+#ifdef LARGE_FILE_SUPPORT
+	/* -- BONUS TEST: Exercise large-file support (up to 64kB) with two files -- */
+	{
+		Console::puts("Running bonus test: large file support with two files\n");
+
+		const unsigned int BIG_FILE1_ID = 10;
+		const unsigned int BIG_FILE2_ID = 11;
+		const unsigned int BIG_SIZE     = 64 * 1024; /* 64kB */
+
+		static char big1_write_buf[64 * 1024];
+		static char big2_write_buf[64 * 1024];
+		static char big1_read_buf[64 * 1024];
+		static char big2_read_buf[64 * 1024];
+
+		/* -- Initialize write buffers -- */
+		Console::puts("Initializing content of Big File 1 and Big File 2\n");
+		for (unsigned int i = 0; i < BIG_SIZE; ++i) {
+			big1_write_buf[i] = (char)(i & 0xFF);                   /* increasing pattern  */
+			big2_write_buf[i] = (char)((BIG_SIZE - 1 - i) & 0xFF);  /* decreasing pattern  */
+		}
+
+		/* -- Create two big files -- */
+		Console::puts("Creating Big File 1 and Big File 2\n");
+		assert(FILE_SYSTEM->CreateFile(BIG_FILE1_ID));
+		assert(FILE_SYSTEM->CreateFile(BIG_FILE2_ID));
+
+		/* -- "Open" the two big files for writing -- */
+		{
+			Console::puts("Opening Big File 1 and Big File 2\n");
+
+			File big1(FILE_SYSTEM, BIG_FILE1_ID);
+			File big2(FILE_SYSTEM, BIG_FILE2_ID);
+
+			Console::puts("Writing into Big File 1 and Big File 2\n");
+
+			int written1 = big1.Write(BIG_SIZE, big1_write_buf);
+			int written2 = big2.Write(BIG_SIZE, big2_write_buf);
+
+			Console::puts("Bytes written to Big File 1: "); Console::puti(written1); Console::puts("\n");
+			Console::puts("Bytes written to Big File 2: "); Console::puti(written2); Console::puts("\n");
+
+			assert((unsigned int)written1 == BIG_SIZE);
+			assert((unsigned int)written2 == BIG_SIZE);
+
+			/* -- Files will get automatically closed when we leave scope  -- */
+
+			Console::puts("Closing Big File 1 and Big File 2\n");
+		}
+
+		/* -- "Open" the big files again for reading and checking content -- */
+		{
+			Console::puts("Opening Big File 1 and Big File 2 again\n");
+
+			File big1(FILE_SYSTEM, BIG_FILE1_ID);
+			File big2(FILE_SYSTEM, BIG_FILE2_ID);
+
+			Console::puts("Checking content of Big File 1 and Big File 2\n");
+
+			big1.Reset();
+			big2.Reset();
+
+			Console::puts("Reading from Big File 1 and Big File 2\n");
+
+			int read1 = big1.Read(BIG_SIZE, big1_read_buf);
+			int read2 = big2.Read(BIG_SIZE, big2_read_buf);
+
+			Console::puts("Bytes read from Big File 1: "); Console::puti(read1); Console::puts("\n");
+			Console::puts("Bytes read from Big File 2: "); Console::puti(read2); Console::puts("\n");
+
+			assert((unsigned int)read1 == BIG_SIZE);
+			assert((unsigned int)read2 == BIG_SIZE);
+
+			for (unsigned int i = 0; i < BIG_SIZE; ++i) {
+				assert(big1_read_buf[i] == big1_write_buf[i]);
+				assert(big2_read_buf[i] == big2_write_buf[i]);
+			}
+
+			Console::puts("SUCCESS for large files!!\n");
+
+			Console::puts("Closing Big File 1 and Big File 2 again\n");
+		}
+
+		/* -- Delete both big files -- */
+
+		Console::puts("Deleting Big File 1 and Big File 2\n");
+
+		assert(FILE_SYSTEM->DeleteFile(BIG_FILE1_ID));
+		assert(FILE_SYSTEM->LookupFile(BIG_FILE1_ID) == nullptr);
+
+		assert(FILE_SYSTEM->DeleteFile(BIG_FILE2_ID));
+		assert(FILE_SYSTEM->LookupFile(BIG_FILE2_ID) == nullptr);
+
+		Console::puts("Verified deletion of Big File 1 and Big File 2\n");
+		Console::puts("Large file test with two files completed successfully.\n");
+	}
+#endif
 
 	Console::puts("EXCELLENT! Your File system seems to work correctly. Congratulations!!\n");
 	/* -- AND ALL THE REST SHOULD FOLLOW ... */

@@ -2,7 +2,7 @@
      File        : file.H
 
      Author      : Nithin Gowtham Saravanan
-     Modified    : 11/27/2025
+     Modified    : 12/05/2025
 
      Description : Simple File class with sequential read/write operations.
  
@@ -22,6 +22,7 @@
 /*--------------------------------------------------------------------------*/
 
 #include "file_system.H"
+#include "macros_config.H"
 
 /*--------------------------------------------------------------------------*/
 /* FORWARDS */ 
@@ -49,10 +50,15 @@ private:
        file system. 
        You may also want a current position, which indicates which position in 
        the file you will read or write next. */
+    
+    FileSystem*   fs;
+    Inode*        inode;
+    unsigned int  current_pos;
 
-    FileSystem*   fs;         /* Back-pointer to file system.        */
-    Inode*        inode;      /* Inode describing this file.         */
-    unsigned int  current_pos;/* Current file position for I/O.      */
+#ifdef LARGE_FILE_SUPPORT
+    unsigned int  current_block_index;
+    bool          cache_dirty;
+#endif
     
     unsigned char block_cache[SimpleDisk::BLOCK_SIZE];
     /* It will be helpful to have a cached copy of the block that you are reading
@@ -60,6 +66,11 @@ private:
        you can cache here. You read the data from disk to cache whenever you open the
        file, and you write the data to disk whenever you close the file. 
     */
+
+#ifdef LARGE_FILE_SUPPORT
+    void LoadBlock(unsigned int _logical_block_index, bool _allocate);
+    /* Load the logical block into cache, allocating it if requested. */
+#endif
 
 public:
 
