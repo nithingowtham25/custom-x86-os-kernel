@@ -870,7 +870,6 @@ looking up file with id = 2
 looking up file with id = 2
 iteration done
 exercise file system; iteration 22...
-One second has passed
 Creating File 1 and File 2
 creating file with id:1
 looking up file with id = 1
@@ -913,6 +912,7 @@ exercise file system; iteration 23...
 Creating File 1 and File 2
 creating file with id:1
 looking up file with id = 1
+One second has passed
 creating file with id:2
 looking up file with id = 2
 Opening File 1 and File 2
@@ -1183,7 +1183,10 @@ looking up file with id = 2
 looking up file with id = 2
 iteration done
 EXCELLENT! Your File system seems to work correctly. Congratulations!!
-Assertion failed at file: kernel.C line: 285 assertion: false
+Assertion failed at file: kernel.C line: 386 assertion: false
+One second has passed
+One second has passed
+One second has passed
 One second has passed
 One second has passed
 One second has passed

@@ -1,0 +1,2517 @@
+Linux
+qemu-system-x86_64 -kernel kernel.bin -serial stdio \
+-device piix3-ide,id=ide -drive id=disk,file=c.img,format=raw,if=none -device ide-hd,drive=disk,bus=ide.0
+Installed exception handler at ISR <0>
+Allocating Memory Pool... done
+Installed interrupt handler at IRQ <0>
+Installed interrupt handler at IRQ <14>
+In file system constructor.
+Hello World!
+before formatting...formatting disk
+formatting completed
+before mounting...mounting file system from disk
+mounting completed
+exercise file system; iteration 0...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 1...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 2...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 3...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 4...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 5...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 6...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 7...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 8...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 9...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 10...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 11...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 12...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 13...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 14...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 15...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 16...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 17...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 18...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 19...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 20...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 21...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 22...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+One second has passed
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 23...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 24...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 25...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 26...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 27...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 28...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise file system; iteration 29...
+Creating File 1 and File 2
+creating file with id:1
+looking up file with id = 1
+creating file with id:2
+looking up file with id = 2
+Opening File 1 and File 2
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Writing into File 1 and File 2
+writing to file
+writing to file
+Closing File 1 and File 2
+Closing file.
+Closing file.
+Opening File 1 and File 2 again
+Opening file.
+looking up file with id = 1
+Opening file.
+looking up file with id = 2
+Checking content of File 1 and File 2
+resetting file
+reading from file
+resetting file
+reading from file
+SUCCESS!!
+Closing File 1 and File 2 again
+Closing file.
+Closing file.
+Deleting File 1 and File 2
+deleting file with id:1
+looking up file with id = 1
+looking up file with id = 1
+deleting file with id:2
+looking up file with id = 2
+looking up file with id = 2
+iteration done
+exercise LARGE file system; iteration 0...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 1...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 2...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 3...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+One second has passed
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 4...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 5...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 6...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 7...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 8...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+One second has passed
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 9...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 10...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 11...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 12...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 13...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+One second has passed
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 14...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 15...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 16...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 17...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+One second has passed
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 18...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 19...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 20...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 21...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 22...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+One second has passed
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 23...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 24...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 25...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 26...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 27...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+One second has passed
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 28...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+exercise LARGE file system; iteration 29...
+Initializing content of Big File 1 and Big File 2
+Creating Big File 1 and Big File 2
+creating file with id:10
+looking up file with id = 10
+creating file with id:11
+looking up file with id = 11
+Opening Big File 1 and Big File 2
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Writing into Big File 1 and Big File 2
+writing to file
+writing to file
+Bytes written to Big File 1: 65536
+Bytes written to Big File 2: 65536
+Closing Big File 1 and Big File 2
+Closing file.
+Closing file.
+Opening Big File 1 and Big File 2 again
+Opening file.
+looking up file with id = 10
+Opening file.
+looking up file with id = 11
+Checking content of Big File 1 and Big File 2
+resetting file
+resetting file
+reading from file
+reading from file
+Bytes read from Big File 1: 65536
+Bytes read from Big File 2: 65536
+SUCCESS for large files!!
+Closing Big File 1 and Big File 2 again
+Closing file.
+Closing file.
+Deleting Big File 1 and Big File 2
+deleting file with id:10
+looking up file with id = 10
+looking up file with id = 10
+deleting file with id:11
+looking up file with id = 11
+looking up file with id = 11
+iteration done for large file
+EXCELLENT! Your File system seems to work correctly. Congratulations!!
+Assertion failed at file: kernel.C line: 386 assertion: false
+One second has passed
+One second has passed
+One second has passed
+One second has passed
+qemu: terminating on signal 2
