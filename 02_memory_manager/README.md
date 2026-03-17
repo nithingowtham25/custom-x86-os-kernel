@@ -21,12 +21,15 @@ The system organizes memory into **frame pools**, allowing separate management o
 
 The system assumes a **32MB physical memory** with the following layout:
 
-* **0MB – 1MB**: Reserved (system, devices, BIOS)
-* **1MB – 2MB**: Kernel code and stack
-* **2MB – 4MB**: Kernel frame pool
-* **> 4MB**: Process frame pool
+* **0MB – 1MB** → Reserved (system, devices, BIOS)
+* **1MB – 2MB** → Kernel code and stack
+* **2MB – 4MB** → Kernel frame pool
+* **> 4MB** → Process frame pool
 
-The frame manager operates primarily on the **kernel pool (2–4MB)** and **process pool (>4MB)** .
+The frame manager primarily operates on:
+
+* Kernel pool (2–4MB)
+* Process pool (>4MB)
 
 ---
 
@@ -34,7 +37,7 @@ The frame manager operates primarily on the **kernel pool (2–4MB)** and **proc
 
 ### Frame Pools
 
-Memory is divided into multiple **frame pools**, each managing a contiguous region of physical memory.
+Memory is divided into multiple **frame pools**, each managing a contiguous region of physical memory:
 
 * Kernel Pool → Used by kernel components
 * Process Pool → Used by user-level memory
@@ -60,7 +63,7 @@ Frame states:
 * `Used` → Allocated frame
 * `HoS (Head of Sequence)` → Start of a contiguous allocation
 
-This design enables efficient tracking of contiguous memory regions.
+This enables efficient tracking of contiguous memory regions.
 
 ---
 
@@ -98,20 +101,20 @@ This ensures correct reconstruction of contiguous free regions.
 
 A global linked list of frame pools is maintained:
 
-* Allows identification of the correct pool during deallocation
+* Enables correct pool identification during deallocation
 * Supports multiple independent memory regions
 
-This design abstracts the frame manager functionality through the `ContFramePool` class.
+This abstraction is implemented through the `ContFramePool` class.
 
 ---
 
 ### Handling Inaccessible Memory
 
-Certain physical memory regions may be unavailable (e.g., **15MB–16MB**).
+Certain physical memory regions (e.g., **15MB–16MB**) are unavailable.
 
-These regions are explicitly marked using:
+These are explicitly marked:
 
-```cpp id="4k2v0k"
+```cpp id="xg1m3v"
 mark_inaccessible(base_frame, n_frames);
 ```
 
@@ -125,7 +128,7 @@ Marked frames are treated as allocated and excluded from future allocations.
 
 * `cont_frame_pool.H` → Class definition and interface
 * `cont_frame_pool.C` → Frame pool implementation
-* `kernel.C` → Initialization and testing of memory pools
+* `kernel.C` → Initialization and testing
 
 ---
 
@@ -145,84 +148,82 @@ Marks a region as unavailable for allocation.
 
 #### `needed_info_frames(n)`
 
-Calculates the number of frames required to store bitmap metadata.
+Calculates frames required for bitmap metadata.
 
 ---
 
 ### Initialization
 
-* Bitmap is initialized with all frames marked `Free`
-* Management data is stored either:
+* Bitmap initialized with all frames marked `Free`
+* Management data stored:
 
   * Internally within the pool, or
-  * Externally (e.g., process pool uses kernel pool memory)
+  * Externally (process pool uses kernel pool memory)
 
 ---
 
 ## Codebase Overview
 
-This module builds upon a minimal kernel framework consisting of bootstrapping code, utility functions, and memory management components.
-
 ### Build System
 
-| File | Description |
-|------|-------------|
-| `Makefile` | Builds the kernel binary (`kernel.bin`). Use `make`, `make clean`, and `make run`. |
-| `linker.ld` | Linker script defining memory layout for the kernel |
+| File        | Description                  |
+| ----------- | ---------------------------- |
+| `Makefile`  | Builds kernel (`kernel.bin`) |
+| `linker.ld` | Defines memory layout        |
 
 ---
 
 ### Core Kernel Components
 
-| File | Description |
-|------|-------------|
-| `start.asm` | Entry point after bootloader; performs low-level initialization and jumps to kernel |
-| `kernel.C` | Main kernel file; initializes memory pools and runs tests |
-| `console.H/C` | Basic console output routines |
-| `utils.H/C` | Utility functions (e.g., `memcpy`, `strlen`) |
-| `assert.H/C` | Assertion utilities for debugging |
+| File          | Description                        |
+| ------------- | ---------------------------------- |
+| `start.asm`   | Entry point after bootloader       |
+| `kernel.C`    | Initializes memory pools and tests |
+| `console.H/C` | Console output                     |
+| `utils.H/C`   | Utility functions                  |
+| `assert.H/C`  | Debug assertions                   |
 
 ---
 
 ### Machine-Level Support
 
-| File | Description |
-|------|-------------|
-| `machine.H/C` | System constants and low-level operations (memory sizes, registers, I/O) |
-| `machine_low.H/asm` | Low-level machine operations (e.g., status register handling) |
+| File                | Description                               |
+| ------------------- | ----------------------------------------- |
+| `machine.H/C`       | System constants and hardware abstraction |
+| `machine_low.H/asm` | Low-level operations                      |
 
 ---
 
 ### Memory Management Components
 
-| File | Description |
-|------|-------------|
-| `cont_frame_pool.H/C` | Implementation of contiguous frame allocation (primary focus of this module) |
-| `simple_frame_pool.H/C` | Example bitmap-based frame manager (non-contiguous allocation, reference only) |
+| File                    | Description                         |
+| ----------------------- | ----------------------------------- |
+| `cont_frame_pool.H/C`   | Contiguous frame allocator          |
+| `simple_frame_pool.H/C` | Reference implementation (not used) |
 
-> Note: `simple_frame_pool` is provided for reference and is not used in the final implementation.
+> Note: `simple_frame_pool` is provided for reference only.
 
 ---
 
 ## Running the Kernel
 
-The kernel can be executed using QEMU:
-
-```bash
+```bash id="y2o6br"
 qemu-system-x86_64 -kernel kernel.bin
 ```
 
-## Testing Strategy
+---
 
-Testing was performed using kernel-level test routines and console output.
+## Testing Strategy
 
 ### Test Cases
 
 * Allocation and deallocation of varying frame sizes
-* Verification of contiguous allocation correctness
-* Handling of inaccessible memory regions
+* Verification of contiguous allocation
+* Handling inaccessible memory regions
 * Validation of correct frame numbering
-* Testing both kernel and process frame pools
+* Testing both kernel and process pools
+
+---
 
 ### Test Procedure
 
@@ -230,29 +231,30 @@ Testing was performed using kernel-level test routines and console output.
 2. Initialize process frame pool (>4MB)
 3. Allocate frames for bitmap storage
 4. Mark inaccessible region (15MB–16MB)
-5. Perform multiple allocation and release operations
-6. Validate behavior using debug output
+5. Perform allocation and release operations
+6. Validate using console output
 
 ---
 
 ## Key Learning Outcomes
 
-* Implementation of a **bitmap-based memory allocator**
-* Understanding of **physical memory management**
-* Handling **contiguous memory allocation**
-* Managing **multiple memory pools**
-* Foundation for **paging and virtual memory systems**
+* Bitmap-based memory allocation
+* Physical memory management fundamentals
+* Contiguous memory allocation strategies
+* Multi-pool memory management
+* Foundation for paging and virtual memory
 
 ---
 
 ## Notes
 
-* The frame manager is implemented via the `ContFramePool` abstraction
-* Efficient bitmap manipulation is critical for performance
-* This module serves as the foundation for subsequent memory subsystems
+* Implemented using `ContFramePool` abstraction
+* Efficient bitmap operations are critical
+* Serves as the foundation for later memory subsystems
 
 ---
 
-## Reference
+## 📄 Documentation
 
-This implementation is based on the frame manager design and requirements described in the machine problem handout and the accompanying design document.
+* 📄 [Design Document](docs/design.pdf)
+* 📄 [Handout](../docs/handout_02_memory_manager.pdf)
