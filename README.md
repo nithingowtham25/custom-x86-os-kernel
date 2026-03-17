@@ -189,15 +189,16 @@ target remote localhost:1234
 continue
 ```
 ## Repository Structure
-boot/           Boot and startup code
-kernel/         Kernel initialization
-memory/         Physical memory management
-paging/         Paging and virtual memory
-scheduler/      Thread scheduling
-drivers/        Device drivers
-filesystem/     File system implementation
-utils/          Kernel utility functions
-Makefile        Build configuration
+```
+01_initialization_environment/ Kernel boot and environment setup
+02_memory_manager/ Physical memory frame management
+03_paging/ Page table management and paging implementation
+04_virtual_memory/ Virtual memory allocation and memory pools
+05_scheduler/ Kernel thread scheduling and context switching
+06_disk_driver/ Disk device driver implementation
+07_file_system/ Simple file system implementation
+README.md Project documentation
+```
 
 ---
 
