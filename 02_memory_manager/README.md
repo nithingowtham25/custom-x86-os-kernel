@@ -159,6 +159,59 @@ Calculates the number of frames required to store bitmap metadata.
 
 ---
 
+## Codebase Overview
+
+This module builds upon a minimal kernel framework consisting of bootstrapping code, utility functions, and memory management components.
+
+### Build System
+
+| File | Description |
+|------|-------------|
+| `Makefile` | Builds the kernel binary (`kernel.bin`). Use `make`, `make clean`, and `make run`. |
+| `linker.ld` | Linker script defining memory layout for the kernel |
+
+---
+
+### Core Kernel Components
+
+| File | Description |
+|------|-------------|
+| `start.asm` | Entry point after bootloader; performs low-level initialization and jumps to kernel |
+| `kernel.C` | Main kernel file; initializes memory pools and runs tests |
+| `console.H/C` | Basic console output routines |
+| `utils.H/C` | Utility functions (e.g., `memcpy`, `strlen`) |
+| `assert.H/C` | Assertion utilities for debugging |
+
+---
+
+### Machine-Level Support
+
+| File | Description |
+|------|-------------|
+| `machine.H/C` | System constants and low-level operations (memory sizes, registers, I/O) |
+| `machine_low.H/asm` | Low-level machine operations (e.g., status register handling) |
+
+---
+
+### Memory Management Components
+
+| File | Description |
+|------|-------------|
+| `cont_frame_pool.H/C` | Implementation of contiguous frame allocation (primary focus of this module) |
+| `simple_frame_pool.H/C` | Example bitmap-based frame manager (non-contiguous allocation, reference only) |
+
+> Note: `simple_frame_pool` is provided for reference and is not used in the final implementation.
+
+---
+
+## Running the Kernel
+
+The kernel can be executed using QEMU:
+
+```bash
+qemu-system-x86_64 -kernel kernel.bin
+```
+
 ## Testing Strategy
 
 Testing was performed using kernel-level test routines and console output.
