@@ -1,0 +1,103 @@
+# =========================
+# Build artifacts
+# =========================
+*.o
+*.obj
+*.elf
+*.bin
+*.out
+*.img
+*.iso
+*.map
+*.lst
+
+# Kernel / OS specific
+*.kernel
+*.boot
+*.sys
+
+# =========================
+# Executables
+# =========================
+a.out
+*.exe
+
+# =========================
+# Debug / Logs
+# =========================
+*.log
+*.dmp
+*.core
+core
+vgcore.*
+
+# GDB
+.gdb_history
+
+# =========================
+# QEMU / Emulator files
+# =========================
+*.qcow2
+*.raw
+*.vdi
+*.vmdk
+
+# =========================
+# Make / Build directories
+# =========================
+build/
+dist/
+out/
+*.d
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# =========================
+# IDE / Editor files
+# =========================
+
+# VS Code
+.vscode/
+
+# CLion / IntelliJ
+.idea/
+cmake-build-*/
+
+# Vim
+*.swp
+
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Coverage / profiling
+# =========================
+*.gcno
+*.gcda
+*.gcov
+gmon.out
+
+# =========================
+# Archives
+# =========================
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# =========================
+# Misc
+# =========================
+*.bak
+*.orig
+*.Zone.Identifier
