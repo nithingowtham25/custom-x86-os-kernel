@@ -64,7 +64,7 @@ out/
 # =========================
 
 # VS Code
-.vscode/
+*.vscode/
 
 # CLion / IntelliJ
 .idea/
