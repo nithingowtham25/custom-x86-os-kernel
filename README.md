@@ -188,19 +188,52 @@ gdb
 target remote localhost:1234
 continue
 ```
-## Repository Structure
-```
-01_initialization_environment/ Kernel boot and environment setup
-02_memory_manager/ Physical memory frame management
-03_paging/ Page table management and paging implementation
-04_virtual_memory/ Virtual memory allocation and memory pools
-05_scheduler/ Kernel thread scheduling and context switching
-06_disk_driver/ Disk device driver implementation
-07_file_system/ Simple file system implementation
-README.md Project documentation
-```
+
+## 🚀 Modules
+
+- 🧠 [Initialization Environment](01_initialization_environment/)  
+  Kernel bootstrapping, environment setup, and console initialization  
+
+- 💾 [Physical Memory Manager](02_memory_manager/)  
+  Contiguous frame allocation and physical memory management  
+
+- 📄 [Paging System](03_paging/)  
+  Two-level page tables and demand paging implementation  
+
+- 🧮 [Virtual Memory Allocation](04_virtual_memory/)  
+  Virtual memory pools and dynamic allocation  
+
+- 🧵 [Scheduler](05_scheduler/)  
+  Kernel thread management and scheduling  
+
+- 💽 [Disk Driver](06_disk_driver/)  
+  Block device driver and disk I/O operations  
+
+- 📁 [File System](07_file_system/)  
+  File storage, inode management, and block allocation  
 
 ---
+
+## 📚 Documentation
+
+- 📄 [Initialization Handout](docs/handout_01_initialization_environment.pdf)  
+- 📄 [Memory Manager Handout](docs/handout_02_memory_manager.pdf)  
+- 📄 [Paging Handout](docs/handout_03_paging.pdf)  
+- 📄 [Virtual Memory Handout](docs/handout_04_virtual_memory.pdf)  
+- 📄 [Scheduler Handout](docs/handout_05_scheduler.pdf)  
+- 📄 [Disk Driver Handout](docs/handout_06_disk_driver.pdf)  
+- 📄 [File System Handout](docs/handout_07_file_system.pdf)  
+
+---
+
+## 📝 Design Reports
+
+- 📘 [Memory Manager Design](02_memory_manager/docs/design.pdf)  
+- 📘 [Paging Design](03_paging/docs/design.pdf)  
+- 📘 [Virtual Memory Design](04_virtual_memory/docs/design.pdf)  
+- 📘 [Scheduler Design](05_scheduler/docs/design.pdf)  
+- 📘 [Disk Driver Design](06_disk_driver/docs/design.pdf)  
+- 📘 [File System Design](07_file_system/docs/design.pdf)  
 
 ## Learning Outcomes
 
