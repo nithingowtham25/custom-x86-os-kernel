@@ -4,7 +4,7 @@
 
 This module implements **kernel-level threading and scheduling**, enabling multiple execution contexts within the operating system. It introduces both **cooperative (FIFO)** and **preemptive (Round-Robin)** scheduling, driven by hardware timer interrupts.
 
-The scheduler manages thread execution, context switching, and lifecycle management, forming the foundation for multitasking in the kernel.
+The scheduler manages thread execution, context switching, and lifecycle management, forming the foundation for multitasking in kernel.
 
 ---
 
