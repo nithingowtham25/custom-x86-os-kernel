@@ -177,7 +177,6 @@ Based on the design:
 * Lazy allocation implemented via page faults
 * Frame allocation unified through process frame pool
 * Clean separation between:
-
   * allocation (VMPool)
   * mapping (PageTable)
 
