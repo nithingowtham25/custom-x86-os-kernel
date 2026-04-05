@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "file_system.C": "cpp",
-        "file.C": "cpp",
-        "simple_disk.C": "cpp",
-        "kernel.C": "cpp"
-    }
-}
