@@ -207,8 +207,8 @@ Calculates frames required for bitmap metadata.
 
 ## Running the Kernel
 
-```bash id="y2o6br"
-qemu-system-x86_64 -kernel kernel.bin
+```bash
+make run
 ```
 
 ---
