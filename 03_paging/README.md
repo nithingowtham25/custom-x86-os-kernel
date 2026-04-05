@@ -4,7 +4,7 @@
 
 This module implements a **demand-paging based virtual memory system** for the x86 architecture. It introduces a two-level page table structure and enables the transition from physical to logical addressing.
 
-The system supports a **single address space** and lays the foundation for future extensions to multi-process virtual memory systems.
+The system supports a **single address space** and lays foundation for future extensions to multi-process virtual memory systems.
 
 ---
 
